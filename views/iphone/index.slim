@@ -1,0 +1,34 @@
+div id='socialbuttons'
+  div id='socialbuttons-wrapper'
+    div id='hatena'
+    div id='twitter'
+    div id='facebook_like'
+  div class='clear'
+div id='wrapper'
+  - @data.each do |data|
+    div class='cube'
+      img class='magnify' src="#{{data['low']}}" data-magnifyby='2' data-magnifyto='500'
+      - if link = data['link']
+        span class='link'
+          a href="#{{link}}" target='_blank'
+            = link.sub(/http:\/\//, '')
+        - param = URI.escape("url=#{link}&text=#{t.tweet.text}")
+        span class='photo-tweet-button'
+          a href="http://twitter.com/share?#{{param}}" target='_blank' tweet
+        div class='clear'
+      - else
+        span class='link' style='background: none;' &thinsp;
+        div class='clear'
+      - if caption = data['caption']
+        - if caption.split(//u).size > 50
+          - caption = caption.split(//u)[0..50].join + '...'
+        span class='caption' #{caption}
+  div class='container'
+    div class='cube'
+      - if @max_id
+        form action='/' method='POST' name='pagination_next'
+          input type='hidden' name='max_id' value="#{@max_id}"
+          input type='hidden' name='_method' value='put'
+          input id='more_button' type='image' src="#{{@target_path}}/images/more.gif" width='306' height='306' name='submit' value='next' alt='more...' title='more...'
+  div class='clear'
+div class='clear'

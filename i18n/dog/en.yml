@@ -1,0 +1,14 @@
+site:
+  title: 'Inustagram - Dog Lovers Instagram Viewer'
+  also:
+    text: 'Do you also like cats?'
+    url: 'http://nekostagram.heroku.com/'
+html:
+  error:
+    splash: !!html
+      <br>Oh My Dog!!<br>
+    description: !!html
+      <br>Sorry, could not display the page.<br><br>
+tweet:
+  text: 'Love Dogs #inustagram'
+

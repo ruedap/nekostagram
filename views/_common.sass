@@ -1,0 +1,107 @@
+@import 'reset'
+
+body
+  font-family: Verdana, "Helvetica Neue", Helvetica, Arial
+  font-size: 100%
+  background-color: $base-background-color
+
+p
+  color: $base-font-color
+  font-size: 0.7em
+  font-weight: 100
+  letter-spacing: 1px
+
+h1
+  text-align: center
+  img
+    margin-top: 18px
+    margin-bottom: 15px
+
+a
+  color: $base-font-color
+  text-decoration: none
+
+a:hover
+  text-decoration: underline
+
+#wrap
+  width: $wrap-width
+  margin: 0 auto
+
+@mixin wrappers($size, $radius)
+  width: $wrapper-width
+  background: $wrapper-background-color
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  border-radius: $radius
+  border-top: $size solid #222
+  border-left: $size solid #222
+  border-right: $size solid #333
+  border-bottom: $size solid #333
+
+#wrapper, #footer, #error, #also
+  @include wrappers($wrappers-border-size, $wrappers-border-radius)
+
+#logo-img
+  margin-right: $logo-img-margin-right
+
+#socialbuttons
+  width: $socialbuttons-width
+  margin: 0 auto
+  text-align: center
+
+#hatena, #twitter, #facebook_like
+  color: #000
+  font-size: .5em
+  text-align: center
+  float: left
+
+#hatena
+  margin-right: $hatena-margin-right
+
+#twitter
+  margin-right: $twitter-margin-right
+
+.cube
+  float: left
+  width: 306px
+  height: 306px
+  span
+    background: $wrapper-background-color
+    padding: 0 .33em
+    position: relative
+    font-size: .625em
+    line-height: 1.0em
+    letter-spacing: 1px
+    color: #fff
+  img
+    float: left
+    height: 100%
+    width: 100%
+
+.cube .link, .cube .photo-tweet-button
+  left: 0
+  top: -307px
+  a
+    color: $cube-font-color-a
+  a:hover
+    color: $cube-font-color-a-hover
+
+.cube .link
+  float: left
+
+.cube .photo-tweet-button
+  float: right
+
+.cube .photo-tweet-button a
+  font-weight: bold
+
+.cube .caption
+  left: 0
+  bottom: 45px
+  font-weight: bold
+  text-transform: uppercase
+
+.clear
+  clear: both
+
