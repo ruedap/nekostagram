@@ -24,5 +24,6 @@ end
 
 group :development do
   gem 'brakeman', '~> 1.9.4'
+  gem 'pry-rails', '~> 0.2.2'
 end
 
