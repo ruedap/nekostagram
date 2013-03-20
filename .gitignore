@@ -19,3 +19,6 @@
 
 # Ignore .powenv
 .powenv
+
+# Ignore .env
+.env
