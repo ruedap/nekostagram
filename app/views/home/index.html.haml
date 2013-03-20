@@ -1,5 +1,4 @@
 %h1 Home#index
-.clearfix
-  .pull-left Find me in app/views/home/index.html.haml
-  .pull-right hoge
+- @cats.each do |cat|
+  %img{src: cat.images.thumbnail.url}
 
