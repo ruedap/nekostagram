@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Nekostagram::Application.config.secret_token = 'f870b5a2ef9693b34a25755a35cfe56acc8a20257b43487593e89fd1545e5b844a9a03dd115e32a61d05f55f4ae6393040cc927c0faa0ebbc17cc31fb6abada4'
+Nekostagram::Application.config.secret_token = '156531bbfd744a891d7d382158a9ed70fbea1e3558511e361619497eafa6fcbbe7325001111e09c9d8b71c16cc7e87cb7e0dc1adf9ff97a86372ee6f02da68d8'
