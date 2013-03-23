@@ -10,10 +10,11 @@ gem 'sass-rails', '~> 3.2.6'
 gem 'compass', '~> 0.12.2'
 gem 'compass-rails', '~> 1.0.3'
 gem 'bootstrap-sass', '~> 2.3.1.0'
-gem 'jquery-rails', '~> 2.2.1'
+gem 'jquery-rails', '~> 2.1.4'
 
 gem 'instagram', '~> 0.10.0'
 gem 'thin', '~> 1.5.1'
+gem 'jbuilder', '~> 1.0.2'
 
 group :production, :staging do
   gem 'therubyracer', '0.11.4' # for Heroku bamboo stack
