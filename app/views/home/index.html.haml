@@ -1,4 +1,13 @@
-%h1 Home#index
-- @cats.each do |cat|
-  %img{src: cat.images.thumbnail.url}
 
+-# JavaScript側から次のURL(JSON)を取得するための非表示なaタグ
+-# TODO: JS側に移動
+= link_to('', {controller: :home, action: :index,
+  max_tag_id: @response.pagination.next_max_tag_id},
+  id: 'js-pic-next-link')
+
+-# 画像一覧セクション
+%section<>
+  %ul#js-pic-list<>
+    %li#is-pic-list-last-li<>
+      = image_tag('loading.png', alt: 'loading...')
+      %i.icon-spinner
