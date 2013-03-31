@@ -32,6 +32,8 @@ GEM
     better_errors (0.7.2)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    binding_of_caller (0.7.1)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     brakeman (1.9.4)
@@ -62,6 +64,7 @@ GEM
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
     daemons (1.1.9)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (1.4.0)
@@ -185,6 +188,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors (~> 0.7.2)
+  binding_of_caller (~> 0.7.1)
   bootstrap-sass (~> 2.3.1.0)
   brakeman (~> 1.9.4)
   coffee-rails (~> 3.2.2)
