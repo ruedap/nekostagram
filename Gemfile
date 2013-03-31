@@ -15,6 +15,7 @@ gem 'jquery-rails', '~> 2.1.4'
 gem 'instagram', '~> 0.10.0'
 gem 'thin', '~> 1.5.1'
 gem 'jbuilder', '~> 1.0.2'
+gem 'ejs', '~> 1.1.1'
 
 group :production, :staging do
   gem 'therubyracer', '0.11.4' # for Heroku bamboo stack
