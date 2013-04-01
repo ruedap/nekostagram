@@ -1,5 +1,8 @@
 
 $ ->
+  # Rails.env
+  isDev = if $('body').data('rails-env') == 'development' then true else false
+
   # animation
   $('header > h1 > img').imagesLoaded ->
     $(this).show().addClass('is-animation-light-speed-in')
@@ -43,7 +46,11 @@ $ ->
 
   setNewImages = (data)->
     $('#is-pic-list-last-li').hide()
-    $.each data, (i, d)->
+    spamCount = 0
+    _(data).each (d)->
+      if spamFilter(d)
+        spamCount += 1
+        return true
       obj= {}
       obj.link = d.link
       obj.url = d.images.low_resolution.url
@@ -52,7 +59,22 @@ $ ->
       $html.children('a').css(visibility: 'hidden')
       setCaptionListener($html)
       $('#js-pic-list').append($html)
+    console.log("#{spamCount} / #{data.length}") if isDev
     $('#is-pic-list-last-li').appendTo('#js-pic-list').show()
+
+  spamThreshold = 30
+  spamTags = [ 'support', 'skin' ]
+
+  spamFilter = (d)->
+    isSpam = false
+    if d.tags.length >= spamThreshold
+      console.log("Threshold: " + d.link) if isDev
+      return true
+    _(spamTags).each (spamTag)->
+      if _(d.tags).include(spamTag)
+        console.log("Tag: " + d.link) if isDev
+        isSpam = true
+    if isSpam then true else false
 
   setCaptionListener = ($html)->
     $html.imagesLoaded ->

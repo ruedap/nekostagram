@@ -7,7 +7,7 @@
     = javascript_include_tag 'application'
     = favicon_link_tag
     = csrf_meta_tags
-  %body{class: body_class}
+  %body{class: body_class, data: {'rails-env' => Rails.env}}
     %header
       %h1
         = image_tag('logo.svg', alt: 'Nekostagram - ねこ大好き専用Instagram', title: 'Nekostagram - ねこ大好き専用Instagram')
