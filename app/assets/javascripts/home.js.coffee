@@ -3,6 +3,11 @@ $ ->
   # Rails.env
   isDev = if $('body').data('rails-env') == 'development' then true else false
 
+  # SVG fallback (use Modernizr)
+  unless Modernizr.svg
+    $('img[src$=".svg"]').attr 'src', ->
+      $(this).attr('src').replace('.svg', '.png')
+
   # animation
   $('header > h1 > img').imagesLoaded ->
     $(this).show().addClass('is-animation-light-speed-in')
