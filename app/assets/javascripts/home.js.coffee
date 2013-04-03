@@ -1,7 +1,5 @@
 
 $ ->
-  baseAjaxURL = '/?max_tag_id='
-  isLoading = false
 
   # Rails.env
   isDev = if $('body').data('rails-env') == 'development' then true else false
@@ -22,9 +20,11 @@ $ ->
     $(this).addClass('is-animation-hinge')
 
   # infinite scroll
-  interval = 1000
+  baseAjaxURL = '/?max_tag_id='
+  isLoading = false
+  ajaxCount = 0
+  ajaxInterval = 1000
   setInterval ->
-
     # judgment
     power = 5
     docH = $(document).height()
@@ -32,13 +32,19 @@ $ ->
     scrT = $(window).scrollTop()
     restH  = docH - scrT - winH
     return unless restH < winH * power
+    return if ajaxCount > 30
+    return if isLoading
+
+    # reset ajaxCount
+    $(window).scroll ->
+      ajaxCount = 0
 
     # ajax loading
     ajaxLoading()
-  , interval
+  , ajaxInterval
 
   ajaxLoading = ->
-    return if isLoading
+    ajaxCount += 1
     isLoading = true
     $.ajax({
       type: 'GET',
