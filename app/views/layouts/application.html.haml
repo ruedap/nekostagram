@@ -1,8 +1,12 @@
+- emoji =  "\u{1F431}"
+- hyphen = (browser.mac?) ? emoji : '-'
+- title = t('title')
+- subtitle = t('subtitle')
+- ruedapcom = t('ruedapcom')
 !!!
-%html
+%html{lang: I18n.locale}
   %head
-    - hyphen = browser.mac? ? '🐱 ' : '-'
-    %title Nekostagram #{hyphen} ねこ大好き専用Instagram
+    %title= "#{title} #{hyphen} #{subtitle}"
     %meta(name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
     = stylesheet_link_tag    'application', :media => 'all'
     = javascript_include_tag 'application'
@@ -11,10 +15,10 @@
   %body{class: body_class, data: {'rails-env' => Rails.env}}
     %header
       %h1
-        = image_tag('logo.svg', alt: "Nekostagram #{hyphen} ねこ大好き専用Instagram", title: "Nekostagram #{hyphen} ねこ大好き専用Instagram")
+        = image_tag("logo.#{I18n.locale}.svg", alt: "#{title} #{hyphen} #{subtitle}", title: "#{title} #{hyphen} #{subtitle}")
       %ul
         %li<>
-          = link_to('https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fnekostagram.com%2F&related=ruedap&text=Nekostagram%20-%20%E3%81%AD%E3%81%93%E5%A4%A7%E5%A5%BD%E3%81%8D%E5%B0%82%E7%94%A8Instagram&tw_p=tweetbutton&url=http%3A%2F%2Fnekostagram.com%2F', target: '_blank') do
+          = link_to("https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fnekostagram.com%2F&related=ruedap&text=Nekostagram%20-%20#{URI.encode(subtitle)}&tw_p=tweetbutton&url=http%3A%2F%2Fnekostagram.com%2F", target: '_blank') do
             %i.icon-twitter>
             %span> Twitter
         %li<>
@@ -28,7 +32,7 @@
         %li<>
           = link_to('http://ruedap.com', target: '_blank') do
             %i.icon-ruedap>
-            %span> ルエダップコム
+            %span>= ruedapcom
     = yield
     :javascript
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
