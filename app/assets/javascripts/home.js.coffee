@@ -16,7 +16,13 @@ $ ->
       $(this).addClass("is-animation-sparkle-y-#{i+1}")
     $('#is-pic-list-last-item').delay(1000).css(visibility: 'visible').hide().fadeIn()
 
+  $('header > h1').hover ->
+    $(this).addClass('is-animation-wiggle')
+  , ->
+    $(this).removeClass('is-animation-wiggle')
+
   $('header > h1').click ->
+    $(this).removeClass('is-animation-wiggle')
     $(this).addClass('is-animation-hinge')
 
   # infinite scroll

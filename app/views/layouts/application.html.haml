@@ -1,7 +1,8 @@
 !!!
 %html
   %head
-    %title Nekostagram 🐱  ねこ大好き専用Instagram
+    - hyphen = browser.mac? ? '🐱 ' : '-'
+    %title Nekostagram #{hyphen} ねこ大好き専用Instagram
     %meta(name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
     = stylesheet_link_tag    'application', :media => 'all'
     = javascript_include_tag 'application'
@@ -10,7 +11,7 @@
   %body{class: body_class, data: {'rails-env' => Rails.env}}
     %header
       %h1
-        = image_tag('logo.svg', alt: 'Nekostagram - ねこ大好き専用Instagram', title: 'Nekostagram - ねこ大好き専用Instagram')
+        = image_tag('logo.svg', alt: "Nekostagram #{hyphen} ねこ大好き専用Instagram", title: "Nekostagram #{hyphen} ねこ大好き専用Instagram")
       %ul
         %li<>
           = link_to('https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fnekostagram.com%2F&related=ruedap&text=Nekostagram%20-%20%E3%81%AD%E3%81%93%E5%A4%A7%E5%A5%BD%E3%81%8D%E5%B0%82%E7%94%A8Instagram&tw_p=tweetbutton&url=http%3A%2F%2Fnekostagram.com%2F', target: '_blank') do
