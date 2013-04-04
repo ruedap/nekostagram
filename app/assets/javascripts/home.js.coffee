@@ -27,19 +27,19 @@ $ ->
 
   # infinite scroll
   baseAjaxURL = '/?max_tag_id='
-  isLoading = false
+  isAjaxLoading = false
   ajaxCount = 0
   ajaxInterval = 1000
   setInterval ->
     # judgment
-    power = 5
-    docH = $(document).height()
-    winH = $(window).height()
-    scrT = $(window).scrollTop()
-    restH  = docH - scrT - winH
-    return unless restH < winH * power
+    _power = 5
+    _docH  = $(document).height()
+    _winH  = $(window).height()
+    _scrT  = $(window).scrollTop()
+    _restH = _docH - _scrT - _winH
+    return unless _restH < _winH * _power
     return if ajaxCount > 30
-    return if isLoading
+    return if isAjaxLoading
 
     # reset ajaxCount
     $(window).scroll ->
@@ -51,7 +51,7 @@ $ ->
 
   ajaxLoading = ->
     ajaxCount += 1
-    isLoading = true
+    isAjaxLoading = true
     $.ajax({
       type: 'GET',
       url: nextAjaxURL(),
@@ -60,9 +60,9 @@ $ ->
       success: (json)->
         addNewImages(json.data)
         nextAjaxURL(json.pagination.next_max_tag_id)
-        isLoading = false
+        isAjaxLoading = false
       error: (a,b,c)->
-        isLoading = false
+        isAjaxLoading = false
     })
 
   nextAjaxURL = (->
@@ -80,11 +80,11 @@ $ ->
       if spamFilter(d)
         spamCount += 1
         return true
-      obj= {}
-      obj.link = d.link
-      obj.url = d.images.low_resolution.url
-      obj.text = if d.caption then $.trim(d.caption.text) else ''
-      $html = $($.trim(JST['templates/home/pic_list_item'](obj)))
+      _obj= {}
+      _obj.link = d.link
+      _obj.url = d.images.low_resolution.url
+      _obj.text = if d.caption then $.trim(d.caption.text) else ''
+      $html = $($.trim(JST['templates/home/pic_list_item'](_obj)))
       $html.children('a').css(visibility: 'hidden')
       addImageLoadedListener($html)
       $('#js-pic-list').append($html)
@@ -94,15 +94,15 @@ $ ->
   ignoreTagNames = [ 'support', 'skin', 'random', 'shadow', 'fashion', 'perfect' ]
   tagCountThreshold = 30
   spamFilter = (d)->
-    isSpam = false
+    _isSpam = false
     if d.tags.length >= tagCountThreshold
       console.log("Threshold: " + d.link) if isDev
       return true
     _(ignoreTagNames).each (tag)->
       if _(d.tags).include(tag)
         console.log("Tag: " + d.link) if isDev
-        isSpam = true
-    if isSpam then true else false
+        _isSpam = true
+    if _isSpam then true else false
 
   addImageLoadedListener = ($html)->
     $html.imagesLoaded ->
