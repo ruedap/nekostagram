@@ -91,14 +91,14 @@ $ ->
     console.log("#{spamCount} / #{data.length}") if isDev
     $('#is-pic-list-last-item').appendTo('#js-pic-list').show()
 
-  spamTagThreshold = 30
-  spamTagNames = [ 'support', 'skin', 'random', 'shadow', 'fashion' ]
+  ignoreTagNames = [ 'support', 'skin', 'random', 'shadow', 'fashion', 'perfect' ]
+  tagCountThreshold = 30
   spamFilter = (d)->
     isSpam = false
-    if d.tags.length >= spamTagThreshold
+    if d.tags.length >= tagCountThreshold
       console.log("Threshold: " + d.link) if isDev
       return true
-    _(spamTagNames).each (tag)->
+    _(ignoreTagNames).each (tag)->
       if _(d.tags).include(tag)
         console.log("Tag: " + d.link) if isDev
         isSpam = true
