@@ -62,5 +62,8 @@ module Nekostagram
 
     # Set to .sass as default for stylesheets
     config.sass.preferred_syntax = :sass
+
+    # Set bower's assets path
+    config.assets.paths << Rails.root.join('vendor/assets/components')
   end
 end
