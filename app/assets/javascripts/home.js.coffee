@@ -91,7 +91,9 @@ $ ->
     console.log("#{spamCount} / #{data.length}") if isDev
     $('#is-pic-list-last-item').appendTo('#js-pic-list').show()
 
-  ignoreTagNames = [ 'support', 'skin', 'random', 'shadow', 'fashion', 'perfect' ]
+  ignoreTagNames = [
+    'support', 'skin', 'random', 'shadow', 'fashion', 'perfect', 'crazy'
+  ]
   tagCountThreshold = 30
   spamFilter = (d)->
     _isSpam = false
