@@ -1,0 +1,43 @@
+- emoji =  "\u{1F431}"
+- hyphen = (browser.mac?) ? emoji : '-'
+- title = t('title')
+- subtitle = t('subtitle')
+- ruedapcom = t('ruedapcom')
+!!!
+%html{lang: I18n.locale}
+  %head
+    %title= "#{title} #{hyphen} #{subtitle}"
+    %meta(name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
+    = stylesheet_link_tag    'application', :media => 'all'
+    = javascript_include_tag 'application'
+    = favicon_link_tag
+    = csrf_meta_tags
+  %body{class: body_class, data: {'rails-env' => Rails.env}}
+    %header
+      %h1
+        = image_tag("logo.#{I18n.locale}.svg", alt: "#{title} #{hyphen} #{subtitle}", title: "#{title} #{hyphen} #{subtitle}")
+      %ul
+        %li<>
+          = link_to("https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fnekostagram.com%2F&related=ruedap&text=Nekostagram%20-%20#{URI.encode(subtitle)}&tw_p=tweetbutton&url=http%3A%2F%2Fnekostagram.com%2F", target: '_blank') do
+            %i.icon-twitter>
+            %span> Twitter
+        %li<>
+          = link_to('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnekostagram.com%2F', target: '_blank') do
+            %i.icon-facebook
+            %span> Facebook
+        %li<>
+          = link_to('https://github.com/ruedap/nekostagram', target: '_blank') do
+            %i.icon-github>
+            %span> GitHub
+        %li<>
+          = link_to('http://ruedap.com', target: '_blank') do
+            %i.icon-ruedap>
+            %span>= ruedapcom
+    = yield
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-39361234-3', 'nekostagram.com');
+      ga('send', 'pageview');
