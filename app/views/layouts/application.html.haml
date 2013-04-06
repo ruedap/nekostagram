@@ -14,9 +14,9 @@
     = csrf_meta_tags
   %body{class: body_class, data: {'rails-env' => Rails.env}}
     %header
-      %h1
+      %h1#js-header-name
         = image_tag("logo.#{I18n.locale}.svg", alt: "#{title} #{hyphen} #{subtitle}", title: "#{title} #{hyphen} #{subtitle}")
-      %ul
+      %ul#js-profile-list
         %li<>
           = link_to("https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fnekostagram.com%2F&related=ruedap&text=Nekostagram%20-%20#{URI.encode(subtitle)}&tw_p=tweetbutton&url=http%3A%2F%2Fnekostagram.com%2F", target: '_blank') do
             %i.icon-twitter>
