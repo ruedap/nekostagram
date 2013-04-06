@@ -92,7 +92,8 @@ $ ->
     $('#is-pic-list-last-item').appendTo('#js-pic-list').show()
 
   ignoreTagNames = [
-    'support', 'skin', 'random', 'shadow', 'fashion', 'perfect', 'crazy'
+    'support', 'skin', 'random', 'shadow', 'fashion', 'perfect', 'crazy',
+    'all_shots'
   ]
   tagCountThreshold = 30
   spamFilter = (d)->
