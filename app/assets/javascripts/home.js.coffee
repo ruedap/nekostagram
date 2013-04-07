@@ -9,21 +9,29 @@ $ ->
     $('img[src$=".svg"]').attr 'src', ->
       $(this).attr('src').replace('.svg', '.png')
 
-  # animation
-  $('header > h1 > img').imagesLoaded ->
-    $(this).show().addClass('is-animation-light-speed-in')
-    $('header > ul > li').each (i, el)->
-      $(this).addClass("is-animation-sparkle-y-#{i+1}")
-    $('#is-pic-list-last-item').delay(1000).css(visibility: 'visible').hide().fadeIn()
+  # jQuery object
+  $headerName = $('#js-header-name')
+  $picList = $('#js-pic-list')
+  $picListLastItem = $('#is-pic-list-last-item')
 
-  $('header > h1').hover ->
+
+  # animation
+  $headerName.find('img').imagesLoaded ->
+    $(this).show().addClass('is-animation-light-speed-in')
+    $('#js-profile-list').find('li').each (i, el)->
+      $(this).addClass("is-animation-sparkle-y-#{i+1}")
+    $picListLastItem.delay(1000).css(visibility: 'visible').hide().fadeIn()
+
+  $headerName.hover ->
     $(this).addClass('is-animation-wiggle')
   , ->
     $(this).removeClass('is-animation-wiggle')
 
-  $('header > h1').click ->
-    $(this).removeClass('is-animation-wiggle')
-    $(this).addClass('is-animation-hinge')
+  $headerName.click ->
+    $(this)
+      .unbind('mouseenter').unbind('mouseleave')
+      .removeClass('is-animation-wiggle')
+      .addClass('is-animation-hinge')
 
   # infinite scroll
   baseAjaxURL = '/?max_tag_id='
@@ -74,7 +82,7 @@ $ ->
   )()
 
   addNewImages = (data)->
-    $('#is-pic-list-last-item').hide()
+    $picListLastItem.hide()
     spamCount = 0
     _(data).each (d)->
       if spamFilter(d)
@@ -87,12 +95,13 @@ $ ->
       $html = $($.trim(JST['templates/home/pic_list_item'](_obj)))
       $html.children('a').css(visibility: 'hidden')
       addImageLoadedListener($html)
-      $('#js-pic-list').append($html)
+      $picList.append($html)
     console.log("#{spamCount} / #{data.length}") if isDev
-    $('#is-pic-list-last-item').appendTo('#js-pic-list').show()
+    $picListLastItem.appendTo($picList).show()
 
   ignoreTagNames = [
-    'support', 'skin', 'random', 'shadow', 'fashion', 'perfect', 'crazy'
+    'support', 'skin', 'random', 'shadow', 'fashion', 'perfect', 'crazy',
+    'all_shots'
   ]
   tagCountThreshold = 30
   spamFilter = (d)->

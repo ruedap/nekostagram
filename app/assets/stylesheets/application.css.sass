@@ -52,8 +52,8 @@ html, body
   padding: 0
 
 header
-  +mq('height', 50%, 50%, 55%, 55%, 60%, 65%)
-  +mq('min-height', 300px, 300px, 350px, 350px, 400px, 400px)
+  +x-mq('height', 50%, 50%, 55%, 55%, 60%, 65%)
+  +x-mq('min-height', 300px, 300px, 350px, 350px, 400px, 400px)
   max-height: 700px
   position: relative
   > h1
@@ -74,7 +74,7 @@ header
     margin: 0 0 0 0
     margin-left: -($_width / 2)
     padding: 0
-    +mq('top', 54%, 54%, 54%, 54%, 56%, 56%)
+    +x-mq('top', 54%, 54%, 54%, 54%, 56%, 56%)
     left: 50%
     z-index: 9
     > li
@@ -101,7 +101,7 @@ section
       margin: 0
       padding: 0
       position: relative
-      +mq('width', 100%, 50%, 50%, 33.333%, 25%, 20%)
+      +x-mq('width', 100%, 50%, 50%, 33.333%, 25%, 20%)
       img
         width: 100%
       span
@@ -127,7 +127,7 @@ section
         position: absolute
         left: 47%
         bottom: 40%
-        +animation-icon-spinner
+        +x-animation-icon-spinner
 
 
 // =============================================================================
@@ -136,7 +136,7 @@ section
 
 // defines
 .is-animation-light-speed-in
-  +animation-light-speed-in
+  +x-animation-light-speed-in
 
 +keyframes(sparkle-y-chain)
   0%
@@ -159,13 +159,13 @@ section
   +animation-sparkle-y-chain(0.3s)
 
 .is-animation-hinge
-  +animation-hinge
+  +x-animation-hinge
 
 .is-animation-wiggle
-  +animation-wiggle
+  +x-animation-wiggle
 
 .transition-social-icon-hover
-  +transition-rotate-scaleup-hover
+  +x-transition-rotate-scaleup-hover
 
 
 // apply
