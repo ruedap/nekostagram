@@ -28,8 +28,10 @@ $ ->
     $(this).removeClass('is-animation-wiggle')
 
   $headerName.click ->
-    $(this).removeClass('is-animation-wiggle')
-    $(this).addClass('is-animation-hinge')
+    $(this)
+      .unbind('mouseenter').unbind('mouseleave')
+      .removeClass('is-animation-wiggle')
+      .addClass('is-animation-hinge')
 
   # infinite scroll
   baseAjaxURL = '/?max_tag_id='
