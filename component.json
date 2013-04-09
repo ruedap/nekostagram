@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "imagesloaded": "~2.1.1",
-    "underscore": "~1.4.4"
+    "underscore": "~1.4.4",
+    "html5shiv": "~3.6.2"
   }
 }
