@@ -73,13 +73,12 @@ $ ->
         isAjaxLoading = false
     })
 
-  nextAjaxURL = (->
+  nextAjaxURL = do ->
     _base = baseAjaxURL
     _url = '/'
     (next_max_tag_id)->
       return _url unless next_max_tag_id?
       _url = _base.replace(/(\=)(.*)$/, "$1#{next_max_tag_id}")
-  )()
 
   addNewImages = (data)->
     $picListLastItem.hide()
