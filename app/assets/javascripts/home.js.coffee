@@ -1,4 +1,3 @@
-
 $ ->
 
   # Rails.env
@@ -73,13 +72,12 @@ $ ->
         isAjaxLoading = false
     })
 
-  nextAjaxURL = (->
+  nextAjaxURL = do ->
     _base = baseAjaxURL
     _url = '/'
     (next_max_tag_id)->
       return _url unless next_max_tag_id?
       _url = _base.replace(/(\=)(.*)$/, "$1#{next_max_tag_id}")
-  )()
 
   addNewImages = (data)->
     $picListLastItem.hide()
@@ -92,7 +90,7 @@ $ ->
       _obj.link = d.link
       _obj.url = d.images.low_resolution.url
       _obj.text = if d.caption then $.trim(d.caption.text) else ''
-      $html = $($.trim(JST['templates/home/pic_list_item'](_obj)))
+      $html = $($.trim(JST['home/pic_list_item'](_obj)))
       $html.children('a').css(visibility: 'hidden')
       addImageLoadedListener($html)
       $picList.append($html)
@@ -122,4 +120,6 @@ $ ->
         $(this).find('span').fadeIn()
       , ->
         $(this).find('span').fadeOut()
+
+
 

@@ -9,6 +9,8 @@
     %title= "#{title} #{hyphen} #{subtitle}"
     %meta(name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
     = stylesheet_link_tag    'application', :media => 'all'
+    /[if lt IE 9]
+      = javascript_include_tag 'html5shiv/dist/html5shiv'
     = javascript_include_tag 'application'
     = favicon_link_tag
     = csrf_meta_tags
