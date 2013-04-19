@@ -1,4 +1,0 @@
-%li
-  %a{:href => "#{@link}", :target => "_blank"}
-    %img{:alt => "Instagram Picture", :src => "#{@url}"}/
-    %span= @text

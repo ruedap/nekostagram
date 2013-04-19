@@ -11,8 +11,6 @@ gem 'compass', '~> 0.13.alpha.3'
 gem 'compass-rails', '~> 1.0.3'
 gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'jquery-rails', '~> 2.1.4'
-gem 'haml_coffee_assets', '~> 1.12.0'
-gem 'execjs'
 
 gem 'instagram', '~> 0.10.0'
 gem 'thin', '~> 1.5.1'
