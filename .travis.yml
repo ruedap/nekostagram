@@ -1,0 +1,12 @@
+bundler_args: --without development production staging
+language: ruby
+rvm:
+  - 1.9.2
+  - 2.0.0
+before_script:
+  - cp config/database.travis.yml config/database.yml
+  - psql -c 'create database nekostagram_test;' -U postgres
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake

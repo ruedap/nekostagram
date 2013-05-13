@@ -37,3 +37,6 @@ group :development do
   gem 'pry-remote', '~> 0.1.7'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 2.13.1'
+end
