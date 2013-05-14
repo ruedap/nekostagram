@@ -77,6 +77,9 @@ GEM
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
     fastercsv (1.5.5)
+    figaro (0.6.4)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     haml (4.0.2)
       tilt
     haml-rails (0.4)
@@ -224,6 +227,7 @@ DEPENDENCIES
   compass (~> 0.13.alpha.3)
   compass-rails (~> 1.0.3)
   ejs (~> 1.1.1)
+  figaro (~> 0.6.4)
   haml (~> 4.0.0)
   haml-rails (~> 0.4)
   handlebars_assets (~> 0.12.0)
