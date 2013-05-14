@@ -36,6 +36,7 @@ group :development do
   gem 'brakeman', '~> 1.9.4'
   gem 'pry-rails', '~> 0.2.2'
   gem 'pry-remote', '~> 0.1.7'
+  gem 'xray-rails', '~> 0.1.5'
 end
 
 group :development, :test do
