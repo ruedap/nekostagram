@@ -7,7 +7,7 @@ class HomeController < ApplicationController
       client_id: Instagram.client_id,
       client_secret: Instagram.client_secret
     )
-    tag = URI.encode('ねこ')
+    tag = URI.encode('nuko')
     begin
       @response = client.tag_recent_media(tag, max_tag_id: params[:max_tag_id])
     rescue
