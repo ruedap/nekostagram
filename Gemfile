@@ -19,7 +19,7 @@ gem 'handlebars_assets', '0.15'
 gem 'instagram', '0.10.0'
 gem 'jbuilder', '2.0.1'
 gem 'ejs', '1.1.1'
-gem 'browser', '~> 0.1.6'
+gem 'browser', '0.3.2'
 
 group :production, :staging do
   gem 'rails_12factor', '0.0.2' # for Heroku assets precompile
