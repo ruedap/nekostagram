@@ -4,6 +4,7 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.2'
 
+gem 'thin', '1.6.1'
 gem 'pg', '0.17.1'
 gem 'haml', '4.0.4'
 gem 'haml-rails', '0.5.3'
@@ -16,7 +17,6 @@ gem 'jquery-rails', '3.0.4'
 gem 'handlebars_assets', '0.15'
 
 gem 'instagram', '0.10.0'
-gem 'thin', '~> 1.5.1'
 gem 'jbuilder', '~> 1.0.2'
 gem 'ejs', '~> 1.1.1'
 gem 'browser', '~> 0.1.6'
