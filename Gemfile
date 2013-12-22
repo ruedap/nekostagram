@@ -17,8 +17,8 @@ gem 'jquery-rails', '3.0.4'
 gem 'handlebars_assets', '0.15'
 
 gem 'instagram', '0.10.0'
-gem 'jbuilder', '~> 1.0.2'
-gem 'ejs', '~> 1.1.1'
+gem 'jbuilder', '2.0.1'
+gem 'ejs', '1.1.1'
 gem 'browser', '~> 0.1.6'
 
 group :production, :staging do
