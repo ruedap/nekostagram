@@ -34,7 +34,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.1)
     atomic (1.1.14)
-    better_errors (0.8.0)
+    better_errors (1.0.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
@@ -229,7 +229,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  better_errors (~> 0.8.0)
+  better_errors (= 1.0.1)
   binding_of_caller (~> 0.7.1)
   bootstrap-sass (= 2.3.2.2)
   brakeman (~> 1.9.4)
