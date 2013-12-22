@@ -230,7 +230,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors (= 1.0.1)
-  binding_of_caller (~> 0.7.1)
+  binding_of_caller (= 0.7.2)
   bootstrap-sass (= 2.3.2.2)
   brakeman (~> 1.9.4)
   browser (= 0.3.2)

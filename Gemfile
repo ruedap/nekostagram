@@ -31,7 +31,7 @@ end
 
 group :development do
   gem 'better_errors', '1.0.1'
-  gem 'binding_of_caller', '~> 0.7.1'
+  gem 'binding_of_caller', '0.7.2'
   gem 'brakeman', '~> 1.9.4'
   gem 'pry-rails', '~> 0.2.2'
   gem 'pry-remote', '~> 0.1.7'
