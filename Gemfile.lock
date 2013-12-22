@@ -254,5 +254,5 @@ DEPENDENCIES
   sass!
   sass-rails (= 4.0.1)
   thin (= 1.6.1)
-  uglifier (>= 1.0.3)
+  uglifier (= 2.4.0)
   xray-rails (~> 0.1.5)

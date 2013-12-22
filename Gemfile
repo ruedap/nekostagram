@@ -15,7 +15,6 @@ gem 'compass-rails', '1.1.2'
 gem 'bootstrap-sass', '2.3.2.2'
 gem 'jquery-rails', '3.0.4'
 gem 'handlebars_assets', '0.15'
-
 gem 'instagram', '0.10.0'
 gem 'jbuilder', '2.0.1'
 gem 'ejs', '1.1.1'
@@ -27,7 +26,7 @@ end
 
 group :assets do
   gem 'coffee-rails', '4.0.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '2.4.0'
 end
 
 group :development do
