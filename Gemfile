@@ -5,7 +5,7 @@ ruby '2.0.0'
 gem 'rails', '4.0.2'
 
 gem 'pg', '0.17.1'
-gem 'haml', '4.0.3'
+gem 'haml', '4.0.4'
 gem 'haml-rails', '0.5.3'
 gem 'sass', github: 'nex3/sass'
 gem 'sass-rails', '4.0.1'

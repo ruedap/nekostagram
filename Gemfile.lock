@@ -92,7 +92,7 @@ GEM
     figaro (0.6.4)
       bundler (~> 1.0)
       rails (>= 3, < 5)
-    haml (4.0.3)
+    haml (4.0.4)
       tilt
     haml-rails (0.5.3)
       actionpack (>= 4.0.1)
@@ -237,7 +237,7 @@ DEPENDENCIES
   compass-rails (= 1.1.2)
   ejs (~> 1.1.1)
   figaro (~> 0.6.4)
-  haml (= 4.0.3)
+  haml (= 4.0.4)
   haml-rails (= 0.5.3)
   handlebars_assets (~> 0.12.0)
   instagram (~> 0.10.0)
