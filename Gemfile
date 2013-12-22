@@ -1,16 +1,18 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.14'
+ruby '2.0.0'
+
+gem 'rails', '4.0.2'
 
 gem 'pg', '0.17.0'
 gem 'haml', '4.0.3'
-gem 'haml-rails', '~> 0.4'
-gem 'sass', '~> 3.2.7'
-gem 'sass-rails', '~> 3.2.6'
-gem 'compass', '~> 0.13.alpha.3'
-gem 'compass-rails', '~> 1.0.3'
-gem 'bootstrap-sass', '~> 2.3.1.0'
-gem 'jquery-rails', '~> 2.1.4'
+gem 'haml-rails', '0.5.3'
+gem 'sass', github: 'nex3/sass'
+gem 'sass-rails', '4.0.1'
+gem 'compass', '1.0.0.alpha.17'
+gem 'compass-rails', '1.1.2'
+gem 'bootstrap-sass', '2.3.2.2'
+gem 'jquery-rails', '3.0.4'
 gem 'handlebars_assets', '~> 0.12.0'
 
 gem 'instagram', '~> 0.10.0'
@@ -18,14 +20,13 @@ gem 'thin', '~> 1.5.1'
 gem 'jbuilder', '~> 1.0.2'
 gem 'ejs', '~> 1.1.1'
 gem 'browser', '~> 0.1.6'
-gem 'sentry-raven', '~> 0.4.6'
 
 group :production, :staging do
-  gem 'therubyracer', '0.11.4' # for Heroku bamboo stack
+  gem 'rails_12factor', '0.0.2' # for Heroku assets precompile
 end
 
 group :assets do
-  gem 'coffee-rails', '~> 3.2.2'
+  gem 'coffee-rails', '4.0.1'
   gem 'uglifier', '>= 1.0.3'
 end
 
