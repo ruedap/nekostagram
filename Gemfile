@@ -19,14 +19,11 @@ gem 'instagram', '0.10.0'
 gem 'jbuilder', '2.0.1'
 gem 'ejs', '1.1.1'
 gem 'browser', '0.3.2'
+gem 'coffee-rails', '4.0.1'
+gem 'uglifier', '2.4.0'
 
 group :production, :staging do
   gem 'rails_12factor', '0.0.2' # for Heroku assets precompile
-end
-
-group :assets do
-  gem 'coffee-rails', '4.0.1'
-  gem 'uglifier', '2.4.0'
 end
 
 group :development do
