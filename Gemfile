@@ -8,7 +8,8 @@ gem 'thin', '1.6.1'
 gem 'pg', '0.17.1'
 gem 'haml', '4.0.4'
 gem 'haml-rails', '0.5.3'
-gem 'sass', github: 'nex3/sass'
+gem 'sass', git: 'git://github.com/nex3/sass.git',
+            branch: 'master'
 gem 'sass-rails', '4.0.1'
 gem 'compass', '1.0.0.alpha.17'
 gem 'compass-rails', '1.1.2'
@@ -37,5 +38,5 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '2.14.0'
+  gem 'rspec-rails', '2.14.1'
 end
