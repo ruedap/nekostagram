@@ -12,7 +12,7 @@ gem 'sass', git: 'git://github.com/nex3/sass.git',
             branch: 'master'
 gem 'sass-rails', '4.0.1'
 gem 'compass', '1.0.0.alpha.17'
-gem 'compass-rails', '1.1.2'
+gem 'compass-rails', '1.1.3'
 gem 'bootstrap-sass', '2.3.2.2'
 gem 'jquery-rails', '3.0.4'
 gem 'handlebars_assets', '0.15'
