@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/nex3/sass.git
-  revision: 9b078c77321292c78db2293a19c756dcee155eb3
-  branch: master
-  specs:
-    sass (3.3.0.rc.2)
-      listen (~> 1.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -188,6 +180,7 @@ GEM
       sexp_processor (~> 4.0)
     ruby_parser (3.2.2)
       sexp_processor (~> 4.1)
+    sass (3.3.0.rc.4)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
@@ -253,7 +246,7 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails_12factor (= 0.0.2)
   rspec-rails (= 2.14.1)
-  sass!
+  sass (= 3.3.0.rc.4)
   sass-rails (= 4.0.1)
   thin (= 1.6.1)
   uglifier (= 2.4.0)
