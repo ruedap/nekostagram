@@ -1,18 +1,15 @@
----
-bundler_args: --without development production staging
 language: ruby
-rvm:
-- 2.1.0
-before_script:
-- cp config/database.travis.yml config/database.yml
-- psql -c 'create database nekostagram_test;' -U postgres
-script:
-- RAILS_ENV=test bundle exec rake db:migrate --trace
-- bundle exec rake db:test:prepare
-- bundle exec rake
-env:
-  global:
-  - secure: |-
-      dDyZ95UzgpXiLFtEGn790JCGb0MthoNBpSODtzV2XA1TW8KIN5oapCl5AoVE
-      W1wWWleceeG8YhfDswmbNf4wSnr0nPNerbQoXWJA+RQhr7I4hU68Tfn5LzJL
-      N7vg4m6VVpt3ZzzTND7r5v7l+mqXJie4ftAqLyiziP3A6KxjJCY=
+rvm: 2.1.0
+notifications:
+  hipchat:
+    rooms:
+      secure: DeGmcWjTugnJDCC2BNqDh53Sstook7Ybb0dVwMYZLMFdRuvxL5JciiX5djlrgTIlW2VVYKtmOfuwDGCYxOsqnhdkpuzOBZkp+YjDvPpzDHELXROlJRtQpo+sbhAeG0GKdHPj40ANxzRYLJ6bsUu7sASmRRLE0KpVPDFfbx2HkAo=
+deploy:
+  provider: heroku
+  api_key:
+    secure: L6cuPE761h5Mp+uVQupgtsuWkLqkr6sXQnNOEGPozRUQ/UAShRJrb6+4qJ4rFbWzbawaW6+sM4WjyKydP+VWiIrpmehd+6iq5TrDerjoOdCTURT/TLnFIca2dnXe5+tzDBGuINIA7EdrxZn6Ht+NhKtHL5+g7rGjw2xU8RPyKuA=
+  app:
+    master: nekostagram2
+    staging: nekostagram2-staging
+  on:
+    repo: ruedap/nekostagram
