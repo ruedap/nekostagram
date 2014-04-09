@@ -4,7 +4,7 @@ require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env)
+Bundler.require(*Rails.groups)
 
 module Nekostagram
   class Application < Rails::Application
@@ -18,12 +18,6 @@ module Nekostagram
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    config.i18n.default_locale = :en
-
-    # Set to .sass as default for stylesheets
-    config.sass.preferred_syntax = :sass
-
-    # Set bower's assets path
-    config.assets.paths << Rails.root.join('vendor/assets/components')
+    # config.i18n.default_locale = :de
   end
 end

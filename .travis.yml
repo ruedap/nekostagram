@@ -1,5 +1,10 @@
 language: ruby
-rvm: 2.1.0
+rvm: 2.1.1
+before_script:
+- cp config/database.travis.yml config/database.yml
+- bundle exec rake db:create db:migrate
+script:
+- bundle exec rake
 notifications:
   hipchat:
     rooms:
