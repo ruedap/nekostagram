@@ -223,9 +223,6 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    xray-rails (0.1.12)
-      coffee-rails
-      rails (>= 3.1.0)
 
 PLATFORMS
   ruby
@@ -257,4 +254,3 @@ DEPENDENCIES
   sass-rails (= 4.0.1)
   thin (= 1.6.1)
   uglifier (= 2.4.0)
-  xray-rails (= 0.1.12)
