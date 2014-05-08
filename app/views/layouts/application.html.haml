@@ -9,33 +9,26 @@
     %title= "#{title} #{hyphen} #{subtitle}"
     %meta(name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
     = stylesheet_link_tag    'application', :media => 'all'
-    /[if lt IE 9]
-      = javascript_include_tag 'html5shiv/dist/html5shiv'
     = javascript_include_tag 'application'
     = favicon_link_tag
     = csrf_meta_tags
-    <!-- 4 -->
   %body{class: body_class, data: {'rails-env' => Rails.env}}
-    %header
-      %h1#js-header-name
+    %header.header
+      %h1#js-header-name.header__heading
         = image_tag("logo.#{I18n.locale}.svg", alt: "#{title} #{hyphen} #{subtitle}", title: "#{title} #{hyphen} #{subtitle}")
-      %ul#js-profile-list
-        %li<>
-          = link_to("https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fnekostagram.com%2F&related=ruedap&text=Nekostagram%20-%20#{URI.encode(subtitle)}&tw_p=tweetbutton&url=http%3A%2F%2Fnekostagram.com%2F", target: '_blank') do
-            %i.icon-twitter>
-            %span> Twitter
-        %li<>
-          = link_to('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnekostagram.com%2F', target: '_blank') do
-            %i.icon-facebook
-            %span> Facebook
-        %li<>
-          = link_to('https://github.com/ruedap/nekostagram', target: '_blank') do
-            %i.icon-github>
-            %span> GitHub
-        %li<>
-          = link_to('http://ruedap.com', target: '_blank') do
-            %i.icon-ruedap>
-            %span>= ruedapcom
+      -# %ul#js-profile-list.header__menu-list
+      -#   %li.header__menu-list-item<>
+      -#     = link_to("https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fnekostagram.com%2F&related=ruedap&text=Nekostagram%20-%20#{URI.encode(subtitle)}&tw_p=tweetbutton&url=http%3A%2F%2Fnekostagram.com%2F", target: '_blank') do
+      -#       %i.icon-twitter>
+      -#       %span> Twitter
+      -#   %li.header__menu-list-item<>
+      -#     = link_to('https://github.com/ruedap/nekostagram', target: '_blank') do
+      -#       %i.icon-github>
+      -#       %span> GitHub
+      -#   %li.header__menu-list-item<>
+      -#     = link_to('http://ruedap.com', target: '_blank') do
+      -#       %i.icon-ruedap>
+      -#       %span>= ruedapcom
     = yield
     :javascript
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

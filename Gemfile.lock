@@ -33,8 +33,6 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (2.3.2.2)
-      sass (~> 3.2)
     brakeman (2.3.1)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
@@ -75,6 +73,11 @@ GEM
     daemons (1.1.9)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
+    dotenv-rails (0.11.1)
+      dotenv (= 0.11.1)
     ejs (1.1.1)
     erubis (2.7.0)
     eventmachine (1.0.3)
@@ -85,9 +88,6 @@ GEM
       faraday (>= 0.7.4, < 0.10)
     fastercsv (1.5.5)
     ffi (1.9.3)
-    figaro (0.7.0)
-      bundler (~> 1.0)
-      rails (>= 3, < 5)
     haml (4.0.4)
       tilt
     haml-rails (0.5.3)
@@ -221,9 +221,6 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    xray-rails (0.1.12)
-      coffee-rails
-      rails (>= 3.1.0)
 
 PLATFORMS
   ruby
@@ -231,14 +228,13 @@ PLATFORMS
 DEPENDENCIES
   better_errors (= 1.0.1)
   binding_of_caller (= 0.7.2)
-  bootstrap-sass (= 2.3.2.2)
   brakeman (= 2.3.1)
   browser (= 0.4.0)
   coffee-rails (= 4.0.1)
   compass (= 1.0.0.alpha.19)
   compass-rails (= 1.1.7)
+  dotenv-rails (= 0.11.1)
   ejs (= 1.1.1)
-  figaro (= 0.7.0)
   haml (= 4.0.4)
   haml-rails (= 0.5.3)
   handlebars_assets (= 0.15)
@@ -255,4 +251,3 @@ DEPENDENCIES
   sass-rails (= 4.0.1)
   thin (= 1.6.1)
   uglifier (= 2.4.0)
-  xray-rails (= 0.1.12)

@@ -12,7 +12,6 @@ gem 'sass', '3.3.4'
 gem 'sass-rails', '4.0.1'
 gem 'compass', '1.0.0.alpha.19'
 gem 'compass-rails', '1.1.7'
-gem 'bootstrap-sass', '2.3.2.2'
 gem 'jquery-rails', '3.1.0'
 gem 'handlebars_assets', '0.15'
 gem 'instagram', '0.10.0'
@@ -32,10 +31,9 @@ group :development do
   gem 'brakeman', '2.3.1'
   gem 'pry-rails', '0.3.2'
   gem 'pry-remote', '0.1.7'
-  gem 'xray-rails', '0.1.12'
-  gem 'figaro', '0.7.0'
 end
 
 group :development, :test do
   gem 'rspec-rails', '2.14.1'
+  gem 'dotenv-rails', '0.11.1'
 end
