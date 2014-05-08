@@ -33,7 +33,6 @@ group :development do
   gem 'pry-rails', '0.3.2'
   gem 'pry-remote', '0.1.7'
   gem 'xray-rails', '0.1.12'
-  gem 'figaro', '0.7.0'
 end
 
 group :development, :test do
