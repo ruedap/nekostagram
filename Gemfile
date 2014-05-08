@@ -38,4 +38,5 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '2.14.1'
+  gem 'dotenv-rails', '0.11.1'
 end
