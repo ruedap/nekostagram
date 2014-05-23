@@ -17,7 +17,7 @@ gem 'handlebars_assets', '0.15'
 gem 'instagram', '0.10.0'
 gem 'jbuilder', '2.0.3'
 gem 'ejs', '1.1.1'
-gem 'browser', '0.4.0'
+gem 'browser', '0.5.0'
 gem 'coffee-rails', '4.0.1'
 gem 'uglifier', '2.4.0'
 
