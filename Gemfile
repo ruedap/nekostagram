@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.2'
 
 gem 'rails', '4.1.1'
 
@@ -8,7 +8,7 @@ gem 'thin', '1.6.1'
 gem 'pg', '0.17.1'
 gem 'haml', '4.0.4'
 gem 'haml-rails', '0.5.3'
-gem 'sass', '3.3.4'
+gem 'sass', '3.3.7'
 gem 'sass-rails', '4.0.1'
 gem 'compass', '1.0.0.alpha.19'
 gem 'compass-rails', '1.1.7'
@@ -17,7 +17,7 @@ gem 'handlebars_assets', '0.15'
 gem 'instagram', '0.10.0'
 gem 'jbuilder', '2.0.3'
 gem 'ejs', '1.1.1'
-gem 'browser', '0.4.0'
+gem 'browser', '0.5.0'
 gem 'coffee-rails', '4.0.1'
 gem 'uglifier', '2.4.0'
 
