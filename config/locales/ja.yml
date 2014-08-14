@@ -1,4 +1,9 @@
 ja:
-  title: Nekostagram
-  subtitle: ねこ大好き専用Instagram
-  ruedapcom: ルエダップコム
+  cat:
+    title: Nekostagram
+    subtitle: ねこ大好き専用Instagram
+    ruedapcom: ルエダップコム
+  dog:
+    title: Inustagram
+    subtitle: いぬ大好き専用Instagram
+    ruedapcom: ルエダップコム
