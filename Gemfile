@@ -20,6 +20,7 @@ gem 'ejs', '1.1.1'
 gem 'browser', '0.5.0'
 gem 'coffee-rails', '4.0.1'
 gem 'uglifier', '2.4.0'
+gem 'rack-canonical-host', '0.1.0'
 
 group :production, :staging do
   gem 'rails_12factor', '0.0.2' # for Heroku assets precompile
