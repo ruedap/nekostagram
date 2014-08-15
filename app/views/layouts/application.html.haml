@@ -1,8 +1,8 @@
-- emoji = "\u{1F408}"
+- emoji = target_cat? ? "\u{1F408}" : "\u{1F415}"
 - hyphen = (browser.mac?) ? emoji : '-'
-- title = t('title')
-- subtitle = t('subtitle')
-- ruedapcom = t('ruedapcom')
+- title = t("#{target_tag}.title")
+- subtitle = t("#{target_tag}.subtitle")
+- ruedapcom = t("#{target_tag}.ruedapcom")
 !!!
 %html{lang: I18n.locale}
   %head
@@ -10,12 +10,12 @@
     %meta(name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
     = stylesheet_link_tag    'application', :media => 'all'
     = javascript_include_tag 'application'
-    = favicon_link_tag
+    = favicon_link_tag("#{target_tag}/favicon.ico")
     = csrf_meta_tags
   %body{class: body_class, data: {'rails-env' => Rails.env}}
     %header.header
       %h1#js-header-name.header__heading
-        = image_tag("logo.#{I18n.locale}.svg", alt: "#{title} #{hyphen} #{subtitle}", title: "#{title} #{hyphen} #{subtitle}")
+        = image_tag("#{target_tag}/logo.#{I18n.locale}.svg", alt: "#{title} #{hyphen} #{subtitle}", title: "#{title} #{hyphen} #{subtitle}")
       -# %ul#js-profile-list.header__menu-list
       -#   %li.header__menu-list-item<>
       -#     = link_to("https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fnekostagram.com%2F&related=ruedap&text=Nekostagram%20-%20#{URI.encode(subtitle)}&tw_p=tweetbutton&url=http%3A%2F%2Fnekostagram.com%2F", target: '_blank') do
