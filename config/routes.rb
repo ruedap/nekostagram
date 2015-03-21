@@ -1,3 +1,3 @@
-Nekostagram::Application.routes.draw do
-  root :to => 'home#index'
+Rails.application.routes.draw do
+  root 'home#index'
 end
