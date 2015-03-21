@@ -5,6 +5,7 @@
     "imagesloaded": "~2.1.1",
     "underscore": "~1.4.4",
     "html5shiv": "~3.6.2",
-    "emma.css": "0.2.0"
+    "emma.css": "0.2.0",
+    "normalize.css": "3.0.2"
   }
 }
