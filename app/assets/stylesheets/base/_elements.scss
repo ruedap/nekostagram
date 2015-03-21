@@ -1,0 +1,32 @@
+// ============================================================================
+// 全体で使用する要素のスタイルを定義します。
+// ============================================================================
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// ^1 Fix Chrome bug https://code.google.com/p/chromium/issues/detail?id=319623
+body {
+  background: $x-bgcolor-body image-url("bg.png") repeat repeat;
+  color: $x-color-body;
+  font-family: $x-font-family-helvetica;
+  font-size: x-strip-units($x-font-size-md) * 1em; // ^1
+}
+
+a {
+  @include x-link-colors(
+    $x-color-link,
+    $x-color-link-hover,
+    $x-color-link-active,
+    $x-color-link-visited,
+    $x-color-link-focus
+  );
+}

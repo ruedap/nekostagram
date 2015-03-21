@@ -1,0 +1,34 @@
+// ============================================================================
+// 全体で使用する変数を定義します。
+// ============================================================================
+
+// Color
+// ============================================================================
+
+$x-color-brand: null;
+$x-color-body: #fff;
+$x-bgcolor-body: #111;
+
+$x-color-link: #0074d9;
+$x-color-link-hover: null;
+$x-color-link-focus: null;
+$x-color-link-active: null;
+$x-color-link-visited: null;
+
+// Font
+// ============================================================================
+
+@font-face {
+  font-family: "YuMin";
+  src: local("YuMincho"), local("Yu Mincho"), local("游明朝");
+}
+
+$x-font-family-gothic: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$x-font-family-helvetica: "Helvetica Neue", Helvetica, Arial, $x-font-family-gothic;
+$x-font-family-lucida: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", $x-font-family-helvetica;
+$x-font-family-avenir: "Avenir Next", "Avenir", $x-font-family-helvetica;
+$x-font-family-mono: Consolas, "Liberation Mono", Courier, "Hiragino Kaku Gothic ProN", Meiryo, monospace;
+$x-font-family-georgia: Georgia, Cambria, "Times New Roman", Times, serif;
+$x-font-family-android: Roboto, "Droid Sans";
+
+$x-font-size-md: 1.4rem;
