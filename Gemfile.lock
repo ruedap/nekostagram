@@ -240,7 +240,6 @@ DEPENDENCIES
   brakeman (= 2.3.1)
   browser (= 0.5.0)
   coffee-rails (= 4.0.1)
-  compass (= 1.0.0.alpha.19)
   compass-rails (= 1.1.7)
   dotenv-rails (= 0.11.1)
   ejs (= 1.1.1)
