@@ -1,20 +1,16 @@
 language: ruby
-rvm: 2.1.2
+rvm: 2.2.1
 before_script:
 - cp config/database.travis.yml config/database.yml
 - bundle exec rake db:create db:migrate
 script:
 - bundle exec rake
-notifications:
-  hipchat:
-    rooms:
-      secure: DeGmcWjTugnJDCC2BNqDh53Sstook7Ybb0dVwMYZLMFdRuvxL5JciiX5djlrgTIlW2VVYKtmOfuwDGCYxOsqnhdkpuzOBZkp+YjDvPpzDHELXROlJRtQpo+sbhAeG0GKdHPj40ANxzRYLJ6bsUu7sASmRRLE0KpVPDFfbx2HkAo=
 deploy:
   provider: heroku
   api_key:
     secure: L6cuPE761h5Mp+uVQupgtsuWkLqkr6sXQnNOEGPozRUQ/UAShRJrb6+4qJ4rFbWzbawaW6+sM4WjyKydP+VWiIrpmehd+6iq5TrDerjoOdCTURT/TLnFIca2dnXe5+tzDBGuINIA7EdrxZn6Ht+NhKtHL5+g7rGjw2xU8RPyKuA=
   app:
-    master: nekostagram2
-    staging: nekostagram2-staging
+    master: nekostagram
+    staging: nekostagram-staging
   on:
     repo: ruedap/nekostagram
