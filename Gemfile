@@ -18,7 +18,7 @@ gem 'jbuilder', '2.2.12'
 gem 'ejs', '1.1.1'
 gem 'browser', '0.8.0'
 gem 'coffee-rails', '4.1.0'
-gem 'uglifier', '2.4.0'
+gem 'uglifier', '2.7.1'
 gem 'rack-canonical-host', '0.1.0'
 
 group :production, :staging do
