@@ -4,6 +4,7 @@
   "dependencies": {
     "imagesloaded": "~2.1.1",
     "underscore": "~1.4.4",
-    "html5shiv": "~3.6.2"
+    "html5shiv": "~3.6.2",
+    "emma.css": "0.2.0"
   }
 }
