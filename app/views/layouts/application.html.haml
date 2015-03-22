@@ -11,7 +11,7 @@
     = javascript_include_tag 'application'
     = favicon_link_tag("#{target_tag}/favicon.ico")
     = csrf_meta_tags
-  %body{class: body_class, data: {'rails-env' => Rails.env}}
+  %body{data: {'rails-env' => Rails.env}}
     %header.GlobalHeader{data: {'header-image-path': image_path("#{target_tag}/logo.#{I18n.locale}.svg"), 'header-image-title': "#{title} #{hyphen} #{subtitle}"}}
     = yield
     :javascript
