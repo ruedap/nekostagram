@@ -29,5 +29,8 @@ module Nekostagram
       harmony: true,
       strip_types: true, # for removing Flow type annotations
     }
+
+    # browserify-rails
+    config.browserify_rails.commandline_options = "-t coffeeify --extension=\".js.coffee\""
   end
 end

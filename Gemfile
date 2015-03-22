@@ -22,6 +22,7 @@ gem 'uglifier', '2.7.1'
 gem 'rack-canonical-host', '0.1.0'
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 gem 'sprockets-coffee-react', '2.4.1'
+gem 'browserify-rails', '0.8.1'
 
 group :production, :staging do
   gem 'rails_12factor', '0.0.2' # for Heroku assets precompile
