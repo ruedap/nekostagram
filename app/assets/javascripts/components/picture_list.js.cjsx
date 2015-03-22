@@ -39,7 +39,7 @@ $ ->
       InstagramClient.load()
       setInterval ->
         InstagramClient.load()
-      , 3000
+      , 1000
     render: ->
       <ul className="PictureList">
         { _.map @state.attrList, (item) ->
@@ -55,11 +55,9 @@ $ ->
   InstagramClient =
     _isLoading: false
     load: =>
-      console.log 'load!'
       return if @_isLoading
       return unless isInfinitScroll()
       @_isLoading = true
-      console.log 'request!'
       request
         .get(instagramNextUrl())
         .set

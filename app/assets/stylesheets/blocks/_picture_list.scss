@@ -5,7 +5,15 @@
 // Block
 // ============================================================================
 
+.PictureList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .PictureList-item {
-  display: inline-block;
-  width: 20%;
+  @include mq(null, sm) { width: 100%; }
+  @include mq(sm, md)   { width: 50%; }
+  @include mq(md, lg)   { width: 33.333%; }
+  @include mq(lg, xl)   { width: 25%; }
+  @include mq(xl, null) { width: 20%; }
 }
