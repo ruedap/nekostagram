@@ -55,9 +55,11 @@ $ ->
   InstagramClient =
     _isLoading: false
     load: =>
+      console.log 'load!'
       return if @_isLoading
       return unless isInfinitScroll()
       @_isLoading = true
+      console.log 'request!'
       request
         .get(instagramNextUrl())
         .set
