@@ -37,9 +37,9 @@ $ ->
         attrList: _.union(@state.attrList, list, nl)
     componentDidMount: ->
       InstagramClient.load()
-      # setInterval ->
-      #   InstagramClient.load()
-      # , 3000
+      setInterval ->
+        InstagramClient.load()
+      , 3000
     render: ->
       <ul className="PictureList">
         { _.map @state.attrList, (item) ->
@@ -55,24 +55,52 @@ $ ->
   InstagramClient =
     _isLoading: false
     load: =>
+      return if @_isLoading
+      return unless isInfinitScroll()
       @_isLoading = true
       request
-        .get('/')
+        .get(instagramNextUrl())
         .set
           Accept: 'application/json'
-        .end (err, res) ->
+        .end (err, res) =>
+          @_isLoading = false
           if res.ok
             attrList = _.map res.body.data, (item) ->
               pictureAttr(
                 item.link,
                 item.images.low_resolution.url,
-                if item.caption then $.trim(item.caption.text) else '',
+                if item.caption then $.trim(item.caption.text) else '', # TODO: Avoid jQuery
                 item.id
               )
-            pl?.appendAttrList(attrList)
+            pl?.appendAttrList(attrList) # FIXME: Refactoring
+            instagramNextUrl(res.body.pagination.next_max_tag_id) # FIXME: Refactoring
           else
             # FIXME: error handling
             console.log(err)
+
+  # FIXME: Refactoring
+  instagramNextUrl = do ->
+    base = '/?max_tag_id='
+    url  = '/'
+    (nextMaxTagId) ->
+      return url unless nextMaxTagId?
+      url = base.replace(/(\=)(.*)$/, "$1#{nextMaxTagId}")
+
+  isInfinitScroll = do ->
+    requestCount = 0
+    $(window).scroll ->
+      requestCount = 0
+    ->
+      dh = $(document).height()
+      wh = $(window).height()
+      st = $(window).scrollTop()
+      d  = dh - st - wh
+      return false unless d < wh * 5
+      return false if requestCount > 10
+      requestCount += 1
+      true
+
+
 
   # Entry point
   # ===========================================================================
