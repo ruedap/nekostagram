@@ -49,6 +49,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     arel (6.0.0)
+    autoprefixer-rails (5.1.7)
+      execjs
+      json
     better_errors (1.0.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -249,6 +252,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails (= 5.1.7)
   better_errors (= 1.0.1)
   binding_of_caller (= 0.7.2)
   brakeman (= 2.3.1)
