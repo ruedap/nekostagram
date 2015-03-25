@@ -5,7 +5,9 @@ $ ->
       imageTitle: React.PropTypes.string.isRequired
     render: ->
       <h1 className="GlobalHeader-heading">
-        <img src={@props.imagePath} alt={@props.imageTitle} title={@props.imageTitle} />
+        <a href="https://github.com/ruedap/nekostagram">
+          <img src={@props.imagePath} alt={@props.imageTitle} title={@props.imageTitle} />
+        </a>
       </h1>
 
   globalHeader = document.querySelector('.GlobalHeader')
