@@ -20,6 +20,7 @@ $ ->
         <a className="Picture-link" href={@props.link} target="_blank">
           <img className="Picture-image" src={@props.src} text={@props.text} />
         </a>
+        <p className="Picture-text">{@props.text}</p>
       </div>
 
   # PictureList
@@ -99,8 +100,6 @@ $ ->
       return false if requestCount > 10
       requestCount += 1
       true
-
-
 
   # Entry point
   # ===========================================================================
