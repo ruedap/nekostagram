@@ -32,5 +32,8 @@ module Nekostagram
 
     # browserify-rails
     config.browserify_rails.commandline_options = "-t coffeeify --extension=\".js.coffee\""
+
+    # npm
+    config.assets.paths << config.root.join("node_modules")
   end
 end

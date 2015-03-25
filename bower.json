@@ -1,9 +1,0 @@
-{
-  "name": "nekostagram",
-  "version": "0.0.1",
-  "dependencies": {
-    "underscore": "1.8.2",
-    "emma.css": "0.2.0",
-    "normalize.css": "3.0.2"
-  }
-}
