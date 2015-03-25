@@ -66,14 +66,15 @@ $ ->
         .end (err, res) =>
           @_isLoading = false
           if res.ok
-            attrList = _.map res.body.data, (item) ->
+            attrList = _.map res.body.data, (json) ->
+              return null if isInvalid(json)
               pictureAttr(
-                item.link,
-                item.images.low_resolution.url,
-                if item.caption then $.trim(item.caption.text) else '', # TODO: Avoid jQuery
-                item.id
+                json.link,
+                json.images.low_resolution.url,
+                if json.caption then $.trim(json.caption.text) else '', # TODO: Avoid jQuery
+                json.id
               )
-            pl?.appendAttrList(attrList) # FIXME: Refactoring
+            pl?.appendAttrList(_.compact(attrList)) # FIXME: Refactoring
             instagramNextUrl(res.body.pagination.next_max_tag_id) # FIXME: Refactoring
           else
             # FIXME: error handling
@@ -100,6 +101,17 @@ $ ->
       return false if requestCount > 10
       requestCount += 1
       true
+
+  ignoreTagNames = [
+    'support', 'skin', 'random', 'shadow', 'fashion', 'perfect', 'crazy',
+    'all_shots', 'follow'
+  ]
+  isInvalid = (json) ->
+    return true if json.tags.length > 30
+    _isInvalid = false
+    _.each ignoreTagNames, (tag) ->
+      _isInvalid = true if _.contains(json.tags, tag)
+    _isInvalid
 
   # Entry point
   # ===========================================================================
