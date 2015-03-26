@@ -1,9 +1,6 @@
 #= require jquery
 #= require jquery_ujs
-#= require modernizr
 #= require underscore/underscore-min
-#= require handlebars.runtime
 #= require react
 #= require react_ujs
 #= require components
-#= require_tree ./templates
