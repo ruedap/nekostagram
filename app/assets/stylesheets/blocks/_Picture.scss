@@ -6,7 +6,7 @@
 // ============================================================================
 
 @keyframes 'fade-in' {
-  0%   { opacity: 0; }
+  0%   { opacity: 0.1; }
   100% { opacity: 1; }
 }
 
@@ -14,6 +14,7 @@
 // ============================================================================
 
 .Picture {
+  display: block;
   position: relative;
 
   &:hover {
@@ -26,13 +27,14 @@
 }
 
 .Picture-image {
+  display: block;
   position: relative;
   vertical-align: bottom;
   width: 100%;
 
   &.is-ready {
     animation-name: 'fade-in';
-    animation-duration: 1.4s;
+    animation-duration: 0.8s;
     animation-timing-function: ease;
   }
 }

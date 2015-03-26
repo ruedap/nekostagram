@@ -32,12 +32,10 @@ $ ->
         src: @props.src
         text: @props.text
     render: ->
-      <div className="Picture">
-        <a className="Picture-link" href={@props.link} target="_blank">
-          <img className={@state.cn} src={@state.src} text={@props.text} />
-        </a>
+      <a className="Picture" href={@props.link} target="_blank">
+        <img className={@state.cn} src={@state.src} text={@props.text} />
         <p className="Picture-text">{@state.text}</p>
-      </div>
+      </a>
 
   # PictureList
   # ===========================================================================
