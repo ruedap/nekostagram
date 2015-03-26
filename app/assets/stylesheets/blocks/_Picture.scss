@@ -2,6 +2,14 @@
 // Instagramの画像を表します。
 // ============================================================================
 
+// Keyframes
+// ============================================================================
+
+@keyframes 'fade-in' {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 // Block
 // ============================================================================
 
@@ -21,6 +29,12 @@
   position: relative;
   vertical-align: bottom;
   width: 100%;
+
+  &.is-ready {
+    animation-name: 'fade-in';
+    animation-duration: 2.4s;
+    animation-timing-function: ease;
+  }
 }
 
 .Picture-text {
