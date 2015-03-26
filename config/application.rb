@@ -22,5 +22,18 @@ module Nekostagram
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # React.js
+    config.react.addons = true
+    config.react.jsx_transform_options = {
+      harmony: true,
+      strip_types: true, # for removing Flow type annotations
+    }
+
+    # browserify-rails
+    config.browserify_rails.commandline_options = "-t coffeeify --extension=\".js.coffee\""
+
+    # npm
+    config.assets.paths << config.root.join("node_modules")
   end
 end

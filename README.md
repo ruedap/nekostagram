@@ -1,1 +1,1 @@
-[![thumbnail](https://dl.dropboxusercontent.com/u/281168/images/github-nekostagram-readme.jpg)](http://nekostagram.com/)
+[![](doc/nekostagram.jpg)](http://nekostagram.com/)

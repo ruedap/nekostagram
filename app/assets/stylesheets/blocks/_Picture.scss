@@ -1,0 +1,59 @@
+// ============================================================================
+// Instagramの画像を表します。
+// ============================================================================
+
+// Keyframes
+// ============================================================================
+
+@keyframes 'fade-in' {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+// Block
+// ============================================================================
+
+.Picture {
+  position: relative;
+
+  &:hover {
+    .Picture-text {
+      opacity: 1;
+      transition-duration: 0.3s;
+      transition-property: opacity;
+    }
+  }
+}
+
+.Picture-image {
+  position: relative;
+  vertical-align: bottom;
+  width: 100%;
+
+  &.is-ready {
+    animation-name: 'fade-in';
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+  }
+}
+
+.Picture-text {
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  left: 0;
+  line-height: 1.6;
+  max-width: 90%;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  position: absolute;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  top: 90%;
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  white-space: nowrap;
+}

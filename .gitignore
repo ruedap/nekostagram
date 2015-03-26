@@ -25,3 +25,6 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# npm
+node_modules/
