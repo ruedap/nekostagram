@@ -3,11 +3,12 @@
   "dependencies": {
     "browserify": "9.0.3",
     "browserify-incremental": "1.5.0",
+    "classnames": "1.2.0",
     "coffeeify": "1.0.0",
-    "superagent": "1.1.0",
-    "underscore": "1.8.2",
     "emma.css": "0.3.0",
-    "normalize.css": "3.0.2"
+    "normalize.css": "3.0.2",
+    "superagent": "1.1.0",
+    "underscore": "1.8.2"
   },
   "license": "MIT",
   "engines": {
