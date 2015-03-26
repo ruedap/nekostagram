@@ -1,6 +1,0 @@
-[submodule "lib/assets/stylesheets/dapicons"]
-	path = lib/assets/stylesheets/dapicons
-	url = https://github.com/ruedap/dapicons.git
-[submodule "lib/assets/stylesheets/dapsass"]
-	path = lib/assets/stylesheets/dapsass
-	url = https://github.com/ruedap/dapsass.git
