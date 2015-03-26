@@ -2,23 +2,33 @@ $ ->
   request = require('superagent')
   NOW_LOADING_KEY = 'NOW_LOADING_KEY'
 
-  # Picture
-  # ===========================================================================
-
+  pictureList = document.querySelector("#js-picture-list")
+  loadingImagePath = pictureList.dataset.loadingImagePath
   pictureAttr = (link, src, text, key) ->
     { link: link, src: src, text: text, key: key}
 
-  pictureList = document.querySelector("#js-picture-list")
+  # Picture
+  # ===========================================================================
 
   Picture = React.createClass
     propTypes:
       link: React.PropTypes.string
       src: React.PropTypes.string.isRequired
       text: React.PropTypes.string
+    getInitialState: ->
+      src: loadingImagePath
+    componentDidMount: ->
+      img = new Image()
+      img.addEventListener("load", @handleImgLoad)
+      img.src = @props.src
+    handleImgLoad: (e) ->
+      e.target.removeEventListener(e.type, @handleImgLoad)
+      @setState
+        src: @props.src
     render: ->
       <div className="Picture">
         <a className="Picture-link" href={@props.link} target="_blank">
-          <img className="Picture-image" src={@props.src} text={@props.text} />
+          <img className="Picture-image" src={@state.src} text={@props.text} />
         </a>
         <p className="Picture-text">{@props.text}</p>
       </div>
@@ -28,8 +38,7 @@ $ ->
 
   PictureList = React.createClass
     getInitialState: ->
-      _loadingImagePath = pictureList.dataset.loadingImagePath
-      _initialAttrList = [pictureAttr(null, _loadingImagePath, 'Now Loading...', NOW_LOADING_KEY)]
+      _initialAttrList = [pictureAttr(null, loadingImagePath, 'Now Loading...', NOW_LOADING_KEY)]
       attrList: _initialAttrList
     appendAttrList: (list) ->
       i = _.findIndex @state.attrList, (item) -> item?.key is NOW_LOADING_KEY
