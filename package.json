@@ -5,7 +5,7 @@
     "browserify-incremental": "1.5.0",
     "classnames": "1.2.0",
     "coffeeify": "1.0.0",
-    "emma.css": "0.3.0",
+    "emma.css": "0.4.0",
     "normalize.css": "3.0.2",
     "superagent": "1.1.0",
     "underscore": "1.8.2"
