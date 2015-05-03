@@ -6,9 +6,6 @@
   },
   "env": {
     "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-multi",
-    "CANONICAL_HOST": {
-      "required": true
-    },
     "INSTAGRAM_CLIENT_ID": {
       "required": true
     },
