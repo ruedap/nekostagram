@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "postdeploy": [
+      "bundle exec rake db:migrate"
+    ]
+  },
+  "env": {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-multi"
+  },
+  "addons": ["heroku-postgresql"]
+}
