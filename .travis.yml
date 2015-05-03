@@ -1,5 +1,5 @@
 language: ruby
-rvm: 2.2.1
+rvm: 2.2.2
 cache: bundler
 sudo: false
 before_script:
@@ -8,12 +8,3 @@ before_script:
 - bundle exec rake db:create db:migrate
 script:
 - bundle exec rake
-deploy:
-  provider: heroku
-  api_key:
-    secure: L6cuPE761h5Mp+uVQupgtsuWkLqkr6sXQnNOEGPozRUQ/UAShRJrb6+4qJ4rFbWzbawaW6+sM4WjyKydP+VWiIrpmehd+6iq5TrDerjoOdCTURT/TLnFIca2dnXe5+tzDBGuINIA7EdrxZn6Ht+NhKtHL5+g7rGjw2xU8RPyKuA=
-  app:
-    master: nekostagram
-    staging: nekostagram-staging
-  on:
-    repo: ruedap/nekostagram
