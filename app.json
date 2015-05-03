@@ -5,7 +5,19 @@
     ]
   },
   "env": {
-    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-multi"
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-multi",
+    "CANONICAL_HOST": {
+      "required": true
+    },
+    "INSTAGRAM_CLIENT_ID": {
+      "required": true
+    },
+    "INSTAGRAM_CLIENT_SECRET": {
+      "required": true
+    },
+    "INSTAGRAM_TARGET_TAG": {
+      "required": true
+    }
   },
   "addons": ["heroku-postgresql"]
 }
