@@ -36,5 +36,5 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '3.2.1'
-  gem 'dotenv-rails', '0.11.1'
+  gem 'dotenv-rails', '2.0.1'
 end
