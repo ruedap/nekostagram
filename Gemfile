@@ -31,7 +31,7 @@ group :development do
   gem 'better_errors', '2.1.1'
   gem 'binding_of_caller', '0.7.2'
   gem 'pry-rails', '0.3.4'
-  gem 'pry-remote', '0.1.7'
+  gem 'pry-remote', '0.1.8'
 end
 
 group :development, :test do
