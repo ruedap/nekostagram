@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe HomeController do
+describe HomeController, type: :controller do
   describe 'GET #index' do
     it 'ステータスコード200を返す' do
       get :index, {}
