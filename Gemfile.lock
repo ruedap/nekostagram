@@ -261,6 +261,7 @@ DEPENDENCIES
   rails (= 4.2.1)
   rails_12factor (= 0.0.2)
   react-rails (= 1.0.0)
+  react-source (= 0.13.2)
   rspec-rails (= 2.14.1)
   sass (= 3.4.13)
   sass-rails (= 5.0.3)
