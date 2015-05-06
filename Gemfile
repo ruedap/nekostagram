@@ -19,7 +19,7 @@ gem 'uglifier', '2.7.1'
 gem 'rack-canonical-host', '0.1.0'
 gem 'react-rails', '1.0.0'
 gem 'react-source', '0.13.2'
-gem 'sprockets-coffee-react', '2.4.1'
+gem 'sprockets-coffee-react', '3.0.1'
 gem 'browserify-rails', '0.8.1'
 gem 'autoprefixer-rails', '5.1.7'
 
