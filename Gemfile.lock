@@ -261,7 +261,6 @@ DEPENDENCIES
   coffee-rails (= 4.1.0)
   dotenv-rails (= 0.11.1)
   ejs (= 1.1.1)
-  eventmachine (~> 1.0.4)
   haml (= 4.0.6)
   haml-rails (= 0.5.3)
   handlebars_assets (= 0.20.1)
