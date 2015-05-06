@@ -102,7 +102,7 @@ GEM
     fastercsv (1.5.5)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
-    haml (4.0.4)
+    haml (4.0.6)
       tilt
     haml-rails (0.5.3)
       actionpack (>= 4.0.1)
@@ -262,7 +262,7 @@ DEPENDENCIES
   dotenv-rails (= 0.11.1)
   ejs (= 1.1.1)
   eventmachine (~> 1.0.4)
-  haml (= 4.0.4)
+  haml (= 4.0.6)
   haml-rails (= 0.5.3)
   handlebars_assets (= 0.20.1)
   instagram (= 1.1.4)

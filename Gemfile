@@ -6,7 +6,7 @@ gem 'rails', '4.2.1'
 
 gem 'thin', '1.6.3'
 gem 'pg', '0.18.1'
-gem 'haml', '4.0.4'
+gem 'haml', '4.0.6'
 gem 'haml-rails', '0.5.3'
 gem 'eventmachine', '~> 1.0.4'
 gem 'sass', '3.4.13'
