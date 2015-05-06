@@ -20,7 +20,7 @@ gem 'rack-canonical-host', '0.1.0'
 gem 'react-rails', '1.0.0'
 gem 'react-source', '0.13.2'
 gem 'sprockets-coffee-react', '3.0.1'
-gem 'browserify-rails', '0.8.1'
+gem 'browserify-rails', '0.9.1'
 gem 'autoprefixer-rails', '5.1.7'
 
 group :production, :staging do
