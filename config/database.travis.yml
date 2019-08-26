@@ -1,5 +1,0 @@
-test:
-  adapter: postgresql
-  encoding: unicode
-  database: nekostagram_test
-  username: postgres
