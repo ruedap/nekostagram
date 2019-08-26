@@ -13,7 +13,8 @@
     "dev": "next -p 3666",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "deploy": "next export && firebase deploy"
   },
   "repository": {
     "type": "git",
