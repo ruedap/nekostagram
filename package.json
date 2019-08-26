@@ -12,7 +12,8 @@
   "scripts": {
     "dev": "next -p 3666",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "repository": {
     "type": "git",
