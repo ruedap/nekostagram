@@ -28,3 +28,6 @@
 
 # npm
 node_modules/
+
+# Next.js
+/.next
