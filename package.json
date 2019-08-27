@@ -1,17 +1,30 @@
 {
   "name": "nekostagram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "dependencies": {
-    "browserify": "9.0.3",
-    "browserify-incremental": "1.5.0",
-    "classnames": "1.2.0",
-    "coffeeify": "1.0.0",
-    "emma.css": "0.4.0",
-    "normalize.css": "3.0.2",
-    "superagent": "1.1.0",
-    "underscore": "1.8.2"
+    "next": "^9.0.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
-  "license": "MIT",
-  "engines": {
-    "node": ">= 0.12"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next -p 3666",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "deploy": "next export && firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ruedap/nekostagram.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruedap/nekostagram/issues"
+  },
+  "homepage": "https://github.com/ruedap/nekostagram#readme"
 }

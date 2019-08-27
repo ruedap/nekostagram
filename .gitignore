@@ -28,3 +28,9 @@
 
 # npm
 node_modules/
+
+/.firebase
+
+# Next.js
+/.next
+/out
