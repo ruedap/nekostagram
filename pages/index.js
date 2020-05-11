@@ -11,7 +11,8 @@ export default () => (
       <a className="logoOuter" href="https://github.com/ruedap/nekostagram">
         <img className="logo" src="static/images/logo.en.svg" />
       </a>
-      <p>Oops! It seems like cats got lost.</p>
+      <!--- <p>Oops! It seems like cats got lost.</p> --->
+      <p>ねこがみつかりませんでした</p>
       <p>
         <a href="https://github.com/ruedap/nekostagram">ruedap/nekostagram</a>
       </p>
