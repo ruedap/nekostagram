@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <img src={logo} className="App-logo" alt="logo" />
-      <p>Oops! It seems like cats got lost.</p>
+      <p>This site is temporarily unavailable.</p>
       <a
         href="https://github.com/ruedap/nekostagram"
         target="_blank"
