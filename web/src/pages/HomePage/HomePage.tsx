@@ -3,7 +3,9 @@ import HomeListCell from 'src/components/HomeListCell'
 const HomePage = () => {
   return (
     <>
-      <h1>HomePage</h1>
+      <h1>
+        <img src="/images/logo.en.svg" alt="Nekostagram" />
+      </h1>
       <HomeListCell />
     </>
   )
