@@ -5185,6 +5185,11 @@ bfj@^6.1.1:
     hoopy "^0.1.4"
     tryer "^1.0.1"
 
+big-integer@^1.6.48:
+  version "1.6.48"
+  resolved "https://registry.yarnpkg.com/big-integer/-/big-integer-1.6.48.tgz#8fd88bd1632cba4a1c8c3e3d7159f08bb95b4b9e"
+  integrity sha512-j51egjPa7/i+RdiRuJbPdJ2FIUYYPhvYLjzoYbcMMm62ooO6F94fETG4MTs46zPAF9Brs04OajboA/qTGuz78w==
+
 big.js@^3.1.3:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
@@ -12881,6 +12886,14 @@ property-information@^5.0.0:
   integrity sha512-YUHSPk+A30YPv+0Qf8i9Mbfe/C0hdPXk1s1jPVToV8pk8BQtpw10ct89Eo7OWkutrwqvT0eicAxlOg3dOAu8JA==
   dependencies:
     xtend "^4.0.0"
+
+proposal-temporal@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/proposal-temporal/-/proposal-temporal-0.8.0.tgz#6787b49d187e9245d38e7b58d028fd1c84dd14b0"
+  integrity sha512-Ho2uZqtuK310ptV//us50nJIe0Yja1g2LI9zDG9eNDV+oo5DmNqT+zXz6jEVbsZHMa+qSD/FfT776eI64bfuRA==
+  dependencies:
+    big-integer "^1.6.48"
+    es-abstract "^1.18.0-next.1"
 
 proptypes@^1.1.0:
   version "1.1.0"
