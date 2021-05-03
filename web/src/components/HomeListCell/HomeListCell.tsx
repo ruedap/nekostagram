@@ -3,6 +3,7 @@ export const QUERY = gql`
     nekos {
       id
       url
+      imageFileName
       createdAt
     }
   }

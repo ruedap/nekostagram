@@ -8,6 +8,7 @@ export const QUERY = gql`
     neko: neko(id: $id) {
       id
       url
+      imageFileName
       createdAt
     }
   }
@@ -17,6 +18,7 @@ const UPDATE_NEKO_MUTATION = gql`
     updateNeko(id: $id, input: $input) {
       id
       url
+      imageFileName
       createdAt
     }
   }

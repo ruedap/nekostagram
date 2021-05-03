@@ -65,6 +65,10 @@ const Neko = ({ neko }) => {
               <td>{neko.url}</td>
             </tr>
             <tr>
+              <th>ImageFileName</th>
+              <td>{neko.imageFileName}</td>
+            </tr>
+            <tr>
               <th>Created at</th>
               <td>{timeTag(neko.createdAt)}</td>
             </tr>

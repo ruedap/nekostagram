@@ -44,6 +44,22 @@ const NekoForm = (props) => {
         />
         <FieldError name="url" className="rw-field-error" />
 
+        <Label
+          name="imageFileName"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          ImageFileName
+        </Label>
+        <TextField
+          name="imageFileName"
+          defaultValue={props.neko?.imageFileName}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
+        <FieldError name="imageFileName" className="rw-field-error" />
+
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
             Save

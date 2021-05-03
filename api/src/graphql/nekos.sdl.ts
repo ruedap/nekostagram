@@ -2,6 +2,7 @@ export const schema = gql`
   type Neko {
     id: Int!
     url: String!
+    imageFileName: String!
     createdAt: DateTime!
   }
 
@@ -12,10 +13,12 @@ export const schema = gql`
 
   input CreateNekoInput {
     url: String!
+    imageFileName: String!
   }
 
   input UpdateNekoInput {
     url: String
+    imageFileName: String
   }
 
   type Mutation {

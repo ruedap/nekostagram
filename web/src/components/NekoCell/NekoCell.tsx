@@ -5,6 +5,7 @@ export const QUERY = gql`
     neko: neko(id: $id) {
       id
       url
+      imageFileName
       createdAt
     }
   }

@@ -63,6 +63,7 @@ const NekosList = ({ nekos }) => {
           <tr>
             <th>Id</th>
             <th>Url</th>
+            <th>ImageFileName</th>
             <th>Created at</th>
             <th>&nbsp;</th>
           </tr>
@@ -72,6 +73,7 @@ const NekosList = ({ nekos }) => {
             <tr key={neko.id}>
               <td>{truncate(neko.id)}</td>
               <td>{truncate(neko.url)}</td>
+              <td>{truncate(neko.imageFileName)}</td>
               <td>{timeTag(neko.createdAt)}</td>
               <td>
                 <nav className="rw-table-actions">
