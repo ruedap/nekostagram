@@ -6,12 +6,7 @@ import {
   TextField,
   Submit,
 } from '@redwoodjs/forms'
-
-const formatDatetime = (value) => {
-  if (value) {
-    return value.replace(/:\d{2}\.\d{3}\w/, '')
-  }
-}
+import { ImageUpload } from 'src/components/ImageUpload'
 
 const NekoForm = (props) => {
   const onSubmit = (data) => {
@@ -44,21 +39,7 @@ const NekoForm = (props) => {
         />
         <FieldError name="url" className="rw-field-error" />
 
-        <Label
-          name="imageFileName"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          ImageFileName
-        </Label>
-        <TextField
-          name="imageFileName"
-          defaultValue={props.neko?.imageFileName}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
-        />
-        <FieldError name="imageFileName" className="rw-field-error" />
+        <ImageUpload />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
