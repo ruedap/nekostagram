@@ -16,8 +16,24 @@ export const Empty = () => {
 }
 
 export const Success = ({ nekos }) => {
+  const BASE_URL =
+    'https://firebasestorage.googleapis.com/v0/b/nekostagram-com.appspot.com/o/nekos%2F'
   const list = nekos.map((neko) => {
-    return <img key={neko.id} src={neko.url} alt="neko" />
+    return (
+      <a
+        key={neko.id}
+        href={neko.url}
+        target="_blank"
+        rel="noreferrer"
+        className="neko"
+      >
+        <img
+          src={`${BASE_URL}${neko.imageFileName}?alt=media`}
+          alt="neko"
+          className="nekoImage"
+        />
+      </a>
+    )
   })
 
   return <div>{list}</div>

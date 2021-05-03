@@ -19,3 +19,7 @@ if (firebase.apps.length === 0) {
 
 export const storage = firebase.storage()
 export default firebase
+
+export const constants = {
+  STORAGE_REF: 'nekos',
+} as const

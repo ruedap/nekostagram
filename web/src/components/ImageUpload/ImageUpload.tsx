@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import firebase, { storage } from 'web/lib/firebase'
+import firebase, { storage, constants } from 'web/lib/firebase'
 import { TextField } from '@redwoodjs/forms'
-
-const STORAGE_REF = 'nekos'
 
 export const ImageUpload: React.VFC = () => {
   const [imageUrl, setImageUrl] = useState<string>()
@@ -36,7 +34,7 @@ export const ImageUpload: React.VFC = () => {
       // 完了後の処理
       // 画像表示のため、アップロードした画像のURLを取得
       storage
-        .ref(STORAGE_REF)
+        .ref(constants.STORAGE_REF)
         .child(imageName)
         .getDownloadURL()
         .then((fireBaseUrl) => {
@@ -47,7 +45,10 @@ export const ImageUpload: React.VFC = () => {
     }
 
     // アップロード処理
-    const upload = storage.ref(STORAGE_REF).child(imageName).put(inputFile)
+    const upload = storage
+      .ref(constants.STORAGE_REF)
+      .child(imageName)
+      .put(inputFile)
     upload.on(firebase.storage.TaskEvent.STATE_CHANGED, next, error, complete)
   }
 
