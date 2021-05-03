@@ -20,6 +20,7 @@
     "prop-types": "^15.7.2",
     "proposal-temporal": "^0.8.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "ulid": "^2.3.0"
   }
 }
