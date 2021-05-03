@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import firebase, { storage, constants } from 'web/lib/firebase'
 import { TextField } from '@redwoodjs/forms'
+import { ulid } from 'ulid'
 
 export const ImageUpload: React.VFC = () => {
   const [imageUrl, setImageUrl] = useState<string>()
@@ -15,7 +16,7 @@ export const ImageUpload: React.VFC = () => {
 
     // TODO: image validation
 
-    const imageName = `20210503-${inputFile.name}`
+    const imageName = `${ulid()}__${inputFile.name}`
 
     const next = (snapshot) => {
       // 進行中のsnapshotを得る
