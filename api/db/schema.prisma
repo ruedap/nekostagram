@@ -11,5 +11,6 @@ generator client {
 model Neko {
   id        Int      @id @default(autoincrement())
   url     String
+  imageFileName     String
   createdAt DateTime @default(now())
 }
