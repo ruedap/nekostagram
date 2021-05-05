@@ -5,11 +5,13 @@ type Props = {
   logInOptions: string
   logOutOptions?: string
   signUpOptions: string
+  disableSignUp?: boolean
 }
 export const LogInOutButtons = ({
   logInOptions,
   logOutOptions,
   signUpOptions,
+  disableSignUp = true,
 }: Props) => {
   const { logIn, logOut, signUp, isAuthenticated } = useAuth()
 
@@ -23,7 +25,7 @@ export const LogInOutButtons = ({
       >
         {isAuthenticated ? 'Log Out' : 'Log In'}
       </button>
-      {!isAuthenticated && (
+      {!isAuthenticated && !disableSignUp && (
         <button
           className="btn btn-alt"
           onClick={() => {

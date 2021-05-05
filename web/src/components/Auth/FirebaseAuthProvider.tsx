@@ -1,18 +1,20 @@
 import { useAuth } from '@redwoodjs/auth'
 import React from 'react'
 import { LogInOutButtons } from './LogInOutButtons'
-// import Badge from 'src/components/Badge'
 
 export const FirebaseAuthProvider: React.VFC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const provider = 'github.com'
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated, currentUser } = useAuth()
+  // TODO
+  const adminUserEmail = 'ruedap@ruedap.com'
+  const isAdminUser = adminUserEmail === currentUser?.email
 
   return (
     <>
       <LogInOutButtons logInOptions={provider} signUpOptions={provider} />
-      {isAuthenticated && <div>{children} </div>}
+      {isAuthenticated && isAdminUser && children}
     </>
   )
 }
