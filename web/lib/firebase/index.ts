@@ -12,6 +12,8 @@ const config = {
   appId: process.env.FIREBASE_APP_ID,
 }
 
+console.log(config.storageBucket)
+
 // Initialize Firebase
 if (firebase.apps.length === 0) {
   firebase.initializeApp(config)
