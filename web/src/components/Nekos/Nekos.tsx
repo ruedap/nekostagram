@@ -4,10 +4,6 @@ import { Link, routes } from '@redwoodjs/router'
 
 import { QUERY } from 'src/components/NekosCell'
 
-import { AuthProvider } from '@redwoodjs/auth'
-import { firebaseClient } from 'web/lib/firebase'
-import { Firebase } from 'web/src/components/Auth/Firebase'
-
 const DELETE_NEKO_MUTATION = gql`
   mutation DeleteNekoMutation($id: Int!) {
     deleteNeko(id: $id) {
@@ -61,64 +57,61 @@ const NekosList = ({ nekos }) => {
   }
 
   return (
-    <AuthProvider client={firebaseClient} type="firebase">
-      <Firebase />
-      <div className="rw-segment rw-table-wrapper-responsive">
-        <table className="rw-table">
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Url</th>
-              <th>ImageFileName</th>
-              <th>ImageFileNameOriginal</th>
-              <th>ImageFileExt</th>
-              <th>Updated at</th>
-              <th>Created at</th>
-              <th>&nbsp;</th>
+    <div className="rw-segment rw-table-wrapper-responsive">
+      <table className="rw-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Url</th>
+            <th>ImageFileName</th>
+            <th>ImageFileNameOriginal</th>
+            <th>ImageFileExt</th>
+            <th>Updated at</th>
+            <th>Created at</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          {nekos.map((neko) => (
+            <tr key={neko.id}>
+              <td>{truncate(neko.id)}</td>
+              <td>{truncate(neko.url)}</td>
+              <td>{truncate(neko.imageFileName)}</td>
+              <td>{truncate(neko.imageFileNameOriginal)}</td>
+              <td>{truncate(neko.imageFileExt)}</td>
+              <td>{timeTag(neko.updatedAt)}</td>
+              <td>{timeTag(neko.createdAt)}</td>
+              <td>
+                <nav className="rw-table-actions">
+                  <Link
+                    to={routes.neko({ id: neko.id })}
+                    title={'Show neko ' + neko.id + ' detail'}
+                    className="rw-button rw-button-small"
+                  >
+                    Show
+                  </Link>
+                  <Link
+                    to={routes.editNeko({ id: neko.id })}
+                    title={'Edit neko ' + neko.id}
+                    className="rw-button rw-button-small rw-button-blue"
+                  >
+                    Edit
+                  </Link>
+                  <a
+                    href="#"
+                    title={'Delete neko ' + neko.id}
+                    className="rw-button rw-button-small rw-button-red"
+                    onClick={() => onDeleteClick(neko.id)}
+                  >
+                    Delete
+                  </a>
+                </nav>
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {nekos.map((neko) => (
-              <tr key={neko.id}>
-                <td>{truncate(neko.id)}</td>
-                <td>{truncate(neko.url)}</td>
-                <td>{truncate(neko.imageFileName)}</td>
-                <td>{truncate(neko.imageFileNameOriginal)}</td>
-                <td>{truncate(neko.imageFileExt)}</td>
-                <td>{timeTag(neko.updatedAt)}</td>
-                <td>{timeTag(neko.createdAt)}</td>
-                <td>
-                  <nav className="rw-table-actions">
-                    <Link
-                      to={routes.neko({ id: neko.id })}
-                      title={'Show neko ' + neko.id + ' detail'}
-                      className="rw-button rw-button-small"
-                    >
-                      Show
-                    </Link>
-                    <Link
-                      to={routes.editNeko({ id: neko.id })}
-                      title={'Edit neko ' + neko.id}
-                      className="rw-button rw-button-small rw-button-blue"
-                    >
-                      Edit
-                    </Link>
-                    <a
-                      href="#"
-                      title={'Delete neko ' + neko.id}
-                      className="rw-button rw-button-small rw-button-red"
-                      onClick={() => onDeleteClick(neko.id)}
-                    >
-                      Delete
-                    </a>
-                  </nav>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </AuthProvider>
+          ))}
+        </tbody>
+      </table>
+    </div>
   )
 }
 

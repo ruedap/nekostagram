@@ -7,15 +7,18 @@
 // 'src/pages/HomePage/HomePage.js'         -> HomePage
 // 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 
-import { Router, Route } from '@redwoodjs/router'
+import { Router, Route, Set } from '@redwoodjs/router'
+import { FirebaseAuthProvider } from 'web/src/components/Auth'
 
 const Routes = () => {
   return (
     <Router>
-      <Route path="/nekos/new" page={NewNekoPage} name="newNeko" />
-      <Route path="/nekos/{id:Int}/edit" page={EditNekoPage} name="editNeko" />
-      <Route path="/nekos/{id:Int}" page={NekoPage} name="neko" />
-      <Route path="/nekos" page={NekosPage} name="nekos" />
+      <Set wrap={FirebaseAuthProvider}>
+        <Route path="/nekos/new" page={NewNekoPage} name="newNeko" />
+        <Route path="/nekos/{id:Int}/edit" page={EditNekoPage} name="editNeko" />
+        <Route path="/nekos/{id:Int}" page={NekoPage} name="neko" />
+        <Route path="/nekos" page={NekosPage} name="nekos" />
+      </Set>
       <Route path="/" page={HomePage} name="home" />
       <Route notfound page={NotFoundPage} />
     </Router>
