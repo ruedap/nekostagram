@@ -13,6 +13,7 @@ const config = {
 }
 
 console.log(config.storageBucket)
+console.log(process.env.FIREBASE_STORAGE_BUCKET)
 
 // Initialize Firebase
 if (firebase.apps.length === 0) {
