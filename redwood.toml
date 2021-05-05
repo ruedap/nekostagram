@@ -1,0 +1,33 @@
+# This file contains the configuration settings for your Redwood app.
+# This file is also what makes your Redwood app a Redwood app.
+# If you remove it and try to run `yarn rw dev`, you'll get an error.
+#
+# For the full list of options, see the "App Configuration: redwood.toml" doc:
+# https://redwoodjs.com/docs/app-configuration-redwood-toml
+
+[web]
+  port = 8910
+  apiProxyPath = "/api"
+  includeEnvironmentVariables = [
+    'FIREBASE_API_KEY',
+    'FIREBASE_AUTH_DOMAIN',
+    'FIREBASE_DATABASE_URL',
+    'FIREBASE_PROJECT_ID',
+    'FIREBASE_STORAGE_BUCKET',
+    'FIREBASE_MESSAGING_SENDER_ID',
+    'FIREBASE_APP_ID',
+  ]
+[api]
+  port = 8911
+  schemaPath = "./api/db/schema.prisma"
+  includeEnvironmentVariables = [
+    'FIREBASE_API_KEY',
+    'FIREBASE_AUTH_DOMAIN',
+    'FIREBASE_DATABASE_URL',
+    'FIREBASE_PROJECT_ID',
+    'FIREBASE_STORAGE_BUCKET',
+    'FIREBASE_MESSAGING_SENDER_ID',
+    'FIREBASE_APP_ID',
+  ]
+[browser]
+  open = true
