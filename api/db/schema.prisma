@@ -10,7 +10,10 @@ generator client {
 
 model Neko {
   id        Int      @id @default(autoincrement())
-  url     String
-  imageFileName     String
   createdAt DateTime @default(now())
+  updatedAt DateTime  @updatedAt
+  url     String
+  imageFileName String
+  imageFileNameOriginal String
+  imageFileExt  String?
 }
