@@ -1,7 +1,8 @@
 import firebase from 'firebase/app'
 import 'firebase/storage'
+import 'firebase/auth'
 
-const config = {
+const firebaseClientConfig = {
   apiKey: 'AIzaSyCPJc4Y4WO9XDIVE9ZM32mY2PsWV5u5UlQ',
   authDomain: 'nekostagram-com.firebaseapp.com',
   databaseURL: 'https://nekostagram-com.firebaseio.com',
@@ -11,13 +12,12 @@ const config = {
   appId: '1:839591093104:web:27f75e76110e209488e5b5',
 }
 
-// Initialize Firebase
-if (firebase.apps.length === 0) {
+export const firebaseClient = ((config) => {
   firebase.initializeApp(config)
-}
+  return firebase
+})(firebaseClientConfig)
 
-export const storage = firebase.storage()
-export default firebase
+export const storage = firebaseClient.storage()
 
 export const constants = {
   STORAGE_REF: 'nekos',

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import firebase, { storage, constants } from 'web/lib/firebase'
+import { firebaseClient, storage, constants } from 'web/lib/firebase'
 import { TextField } from '@redwoodjs/forms'
 import { ulid } from 'ulid'
 
@@ -55,7 +55,13 @@ export const ImageUpload: React.VFC = () => {
       .ref(constants.STORAGE_REF)
       .child(imageName)
       .put(inputFile)
-    upload.on(firebase.storage.TaskEvent.STATE_CHANGED, next, error, complete)
+
+    upload.on(
+      firebaseClient.storage.TaskEvent.STATE_CHANGED,
+      next,
+      error,
+      complete
+    )
   }
 
   return (
