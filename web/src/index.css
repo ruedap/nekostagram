@@ -26,12 +26,3 @@ body {
 a {
   color: #336699;
 }
-
-.neko {
-  width: 33%;
-  display: inline-flex;
-}
-
-.nekoImage {
-  width: 100%;
-}
