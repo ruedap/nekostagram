@@ -7,5 +7,22 @@
   },
   "[prisma]": {
     "editor.formatOnSave": true
+  },
+  "peacock.color": "#bbb",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#d4d4d4",
+    "activityBar.activeBorder": "#cf70cf",
+    "activityBar.background": "#d4d4d4",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#cf70cf",
+    "activityBarBadge.foreground": "#15202b",
+    "statusBar.background": "#bbbbbb",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#a1a1a1",
+    "titleBar.activeBackground": "#bbbbbb",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#bbbbbb99",
+    "titleBar.inactiveForeground": "#15202b99"
   }
 }
