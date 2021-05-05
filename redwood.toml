@@ -8,8 +8,26 @@
 [web]
   port = 8910
   apiProxyPath = "/api"
+  includeEnvironmentVariables = [
+    'FIREBASE_API_KEY',
+    'FIREBASE_AUTH_DOMAIN',
+    'FIREBASE_DATABASE_URL',
+    'FIREBASE_PROJECT_ID',
+    'FIREBASE_STORAGE_BUCKET',
+    'FIREBASE_MESSAGING_SENDER_ID',
+    'FIREBASE_APP_ID',
+  ]
 [api]
   port = 8911
   schemaPath = "./api/db/schema.prisma"
+  includeEnvironmentVariables = [
+    'FIREBASE_API_KEY',
+    'FIREBASE_AUTH_DOMAIN',
+    'FIREBASE_DATABASE_URL',
+    'FIREBASE_PROJECT_ID',
+    'FIREBASE_STORAGE_BUCKET',
+    'FIREBASE_MESSAGING_SENDER_ID',
+    'FIREBASE_APP_ID',
+  ]
 [browser]
   open = true
