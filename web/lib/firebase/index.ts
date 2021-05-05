@@ -1,19 +1,15 @@
 import firebase from 'firebase/app'
 import 'firebase/storage'
 
-// TODO: .env
 const config = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.FIREBASE_DATABASE_URL,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
+  apiKey: 'AIzaSyCPJc4Y4WO9XDIVE9ZM32mY2PsWV5u5UlQ',
+  authDomain: 'nekostagram-com.firebaseapp.com',
+  databaseURL: 'https://nekostagram-com.firebaseio.com',
+  projectId: 'nekostagram-com',
+  storageBucket: 'nekostagram-com.appspot.com',
+  messagingSenderId: '839591093104',
+  appId: '1:839591093104:web:27f75e76110e209488e5b5',
 }
-
-console.log(config.storageBucket)
-console.log(process.env.FIREBASE_STORAGE_BUCKET)
 
 // Initialize Firebase
 if (firebase.apps.length === 0) {
