@@ -6,6 +6,8 @@ import { ulid } from 'ulid'
 export const ImageUpload: React.VFC = () => {
   const [imageUrl, setImageUrl] = useState<string>()
   const [imageFileName, setImageFileName] = useState<string>()
+  const [imageFileNameOriginal, setImageFileNameOriginal] = useState<string>()
+  const [imageFileExt, setImageFileExt] = useState<string>()
 
   const onChange = (event) => {
     const inputFile = (event.target as HTMLInputElement).files[0]
@@ -16,7 +18,8 @@ export const ImageUpload: React.VFC = () => {
 
     // TODO: image validation
 
-    const imageName = `${ulid()}__${inputFile.name}`
+    const imageExt = inputFile.name.split('.').pop().toLowerCase()
+    const imageName = `${ulid()}.${imageExt}`
 
     const next = (snapshot) => {
       // 進行中のsnapshotを得る
@@ -38,9 +41,11 @@ export const ImageUpload: React.VFC = () => {
         .ref(constants.STORAGE_REF)
         .child(imageName)
         .getDownloadURL()
-        .then((fireBaseUrl) => {
-          setImageUrl(fireBaseUrl)
+        .then((url) => {
+          setImageUrl(url)
           setImageFileName(imageName)
+          setImageFileNameOriginal(inputFile.name)
+          setImageFileExt(imageExt)
         })
       // TODO: error
     }
@@ -61,6 +66,20 @@ export const ImageUpload: React.VFC = () => {
       <TextField
         name="imageFileName"
         value={imageFileName}
+        className="rw-input"
+        errorClassName="rw-input rw-input-error"
+        validation={{ required: true }}
+      />
+      <TextField
+        name="imageFileNameOriginal"
+        value={imageFileNameOriginal}
+        className="rw-input"
+        errorClassName="rw-input rw-input-error"
+        validation={{ required: true }}
+      />
+      <TextField
+        name="imageFileExt"
+        value={imageFileExt}
         className="rw-input"
         errorClassName="rw-input rw-input-error"
         validation={{ required: true }}

@@ -6,6 +6,8 @@ export const QUERY = gql`
       id
       url
       imageFileName
+      imageFileNameOriginal
+      imageFileExt
       createdAt
     }
   }

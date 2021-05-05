@@ -1,9 +1,12 @@
 export const schema = gql`
   type Neko {
     id: Int!
+    createdAt: DateTime!
+    updatedAt: DateTime!
     url: String!
     imageFileName: String!
-    createdAt: DateTime!
+    imageFileNameOriginal: String!
+    imageFileExt: String
   }
 
   type Query {
@@ -14,11 +17,15 @@ export const schema = gql`
   input CreateNekoInput {
     url: String!
     imageFileName: String!
+    imageFileNameOriginal: String!
+    imageFileExt: String
   }
 
   input UpdateNekoInput {
-    url: String
-    imageFileName: String
+    url: String!
+    imageFileName: String!
+    imageFileNameOriginal: String!
+    imageFileExt: String
   }
 
   type Mutation {
