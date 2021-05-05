@@ -1336,6 +1336,13 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@compiled/react@^0.6.10":
+  version "0.6.10"
+  resolved "https://registry.yarnpkg.com/@compiled/react/-/react-0.6.10.tgz#140172bd471b89359105696e05ee6f616a352ea7"
+  integrity sha512-0KYg6/kAXDcPOIgvCIOer+BZOQiTHmNTVXX7KYmoeBsnAtTVejWB2XG8DRCaKcbUWLZlHT7x2kpbmZaj2Sni+A==
+  dependencies:
+    csstype "^3.0.7"
+
 "@dsherret/to-absolute-glob@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@dsherret/to-absolute-glob/-/to-absolute-glob-2.0.2.tgz#1f6475dc8bd974cea07a2daf3864b317b1dd332c"
@@ -6665,6 +6672,11 @@ csstype@^3.0.2:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.7.tgz#2a5fb75e1015e84dd15692f71e89a1450290950b"
   integrity sha512-KxnUB0ZMlnUWCsx2Z8MUsr6qV6ja1w9ArPErJaJaF8a5SOWoHLIszeCTKGRGRgtLgYrs1E8CHkNSP1VZTTPc9g==
+
+csstype@^3.0.7:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.8.tgz#d2266a792729fb227cd216fb572f43728e1ad340"
+  integrity sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==
 
 cyclist@^1.0.1:
   version "1.0.1"
