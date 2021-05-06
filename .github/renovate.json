@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:js-app"],
+  "dependencyDashboard": true,
+  "enabledManagers": ["npm"],
+  "rangeStrategy": "bump",
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "semanticCommits": "enabled",
+  "ignoreDeprecated": true,
+  "patch": {
+    "automerge": true
+  },
+  "schedule": "every weekend",
+  "timezone": "Asia/Tokyo",
+  "labels": ["deps"]
+}
