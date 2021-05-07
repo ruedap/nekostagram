@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@redwoodjs/api": "^0.31.0",
-    "@redwoodjs/api-server": "^0.31.0",
-    "firebase-admin": "^9.7.0"
+    "@redwoodjs/api": "0.31.2",
+    "@redwoodjs/api-server": "0.31.2",
+    "firebase-admin": "9.7.0"
   }
 }
