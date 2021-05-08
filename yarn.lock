@@ -1301,7 +1301,7 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@compiled/react@^0.6.10":
+"@compiled/react@0.6.10":
   version "0.6.10"
   resolved "https://registry.yarnpkg.com/@compiled/react/-/react-0.6.10.tgz#140172bd471b89359105696e05ee6f616a352ea7"
   integrity sha512-0KYg6/kAXDcPOIgvCIOer+BZOQiTHmNTVXX7KYmoeBsnAtTVejWB2XG8DRCaKcbUWLZlHT7x2kpbmZaj2Sni+A==
@@ -2319,7 +2319,7 @@
     tiny-warning "^1.0.3"
     tslib "^2.1.0"
 
-"@redwoodjs/api-server@^0.31.0", "@redwoodjs/api-server@^0.31.2":
+"@redwoodjs/api-server@0.31.2", "@redwoodjs/api-server@^0.31.2":
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/@redwoodjs/api-server/-/api-server-0.31.2.tgz#8a6c9bcd61f38f8db3252360cb87dc90f044433a"
   integrity sha512-2etsTx/cXQsvpdsenlHs63X+ajp7U2zh81EIasfLK+0H963dUdeaajvkjd6z28huLGYGdZI1SnbnYIv8ih89SA==
@@ -2337,7 +2337,7 @@
     youch "^2.1.1"
     youch-terminal "^1.0.1"
 
-"@redwoodjs/api@^0.31.0":
+"@redwoodjs/api@0.31.2":
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/@redwoodjs/api/-/api-0.31.2.tgz#d519015c981e1a499c278d3bea1b4b561c69e481"
   integrity sha512-y2SFGj6mz31GDd4aUqfcJFGGHbJF7b6BAazFgTg936BTz0PfLDoVTTb21fJpr4ho+Hs9w72Y4vfq5dj48/qzYA==
@@ -2357,7 +2357,7 @@
     pino "^6.11.3"
     pino-pretty "^4.7.1"
 
-"@redwoodjs/auth@^0.31.2":
+"@redwoodjs/auth@0.31.2", "@redwoodjs/auth@^0.31.2":
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/@redwoodjs/auth/-/auth-0.31.2.tgz#f936ab10a71218358732db4ad204d6773532d042"
   integrity sha512-MOmuoYCXsKa84aua6hxGg6r5auI52/OFTZ8moJs3HNetIEs28qCrWnTl34zg2NT4lR51I6tf81bTOFM5qQ4GVA==
@@ -2396,7 +2396,7 @@
     terminal-link "^2.1.1"
     yargs "^16.0.3"
 
-"@redwoodjs/core@^0.31.0":
+"@redwoodjs/core@0.31.2":
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/@redwoodjs/core/-/core-0.31.2.tgz#ddae4903aca3a1dffaf3787052710583704052d1"
   integrity sha512-zWajFcJeE6z7P6SroVDWEAcFAi8k5HoWSyaeMpo0CjsbNJu2VRWNoC0UhKkTjdTJTKFDA6jIGaQpABJDO+0tbA==
@@ -2508,7 +2508,7 @@
   resolved "https://registry.yarnpkg.com/@redwoodjs/eslint-plugin-redwood/-/eslint-plugin-redwood-0.31.2.tgz#c177c5c18fca2bc2201b9c6ffde82b197904e8b8"
   integrity sha512-OFsC72KFeB1OuCA6VM+IuVPZy/inZTmJCBJNZ9XxuYvnic46N0Bi3YfSM+4MiqPGF9ZD0i7AizYIauYSzLmFmA==
 
-"@redwoodjs/forms@^0.31.0":
+"@redwoodjs/forms@0.31.2":
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/@redwoodjs/forms/-/forms-0.31.2.tgz#678d8272857725ba69b38f59c72237b482863ba7"
   integrity sha512-F+eyTCAM/JjZJUyPPgNuEQWKw+bR7POCAzKB8ZZLKPZE/+ij5V6fzRNXiVUZ8rWdYVFRVuXarvvLlHqXUpcgog==
@@ -2544,7 +2544,7 @@
     babel-plugin-ignore-html-and-css-imports "^0.1.0"
     node-fetch "^2.6.1"
 
-"@redwoodjs/router@^0.31.0", "@redwoodjs/router@^0.31.2":
+"@redwoodjs/router@0.31.2", "@redwoodjs/router@^0.31.2":
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/@redwoodjs/router/-/router-0.31.2.tgz#85d5db732aa43dfb279f85e8cf3192366794c0fd"
   integrity sha512-HnOIxfIMkgRr9UYoDwQ40HYI331cxaQzS6tdQTj2b4mP9CcI6xVXfQCjfPh2VrO2rimctV2c5YGDNtaPfT6/3Q==
@@ -2594,7 +2594,7 @@
     "@types/react" "17.0.3"
     msw "^0.21.2"
 
-"@redwoodjs/web@^0.31.0", "@redwoodjs/web@^0.31.2":
+"@redwoodjs/web@0.31.2", "@redwoodjs/web@^0.31.2":
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/@redwoodjs/web/-/web-0.31.2.tgz#3540d94e0e2e533d06f3a06d336ad0ab409c6c9b"
   integrity sha512-nk7OTlunb9xC4HjXyoURhORrXecV12JrSsi8Zzv1sRAkbjDEAAo8B/BchXl1YfPMMEG7gnbEPuCVu4V3Y5YcKA==
@@ -8098,7 +8098,7 @@ findup-sync@^4.0.0:
     micromatch "^4.0.2"
     resolve-dir "^1.0.1"
 
-firebase-admin@^9.7.0:
+firebase-admin@9.7.0:
   version "9.7.0"
   resolved "https://registry.yarnpkg.com/firebase-admin/-/firebase-admin-9.7.0.tgz#c5fde178a1f1e757373b38601eb62a8ccbcb9393"
   integrity sha512-dvxy4lK2P2BikE9lB2hj4dUXGm9tuoGRVtobXzCpk7uhi0/FuTOU1yp4IW7vlMI20fxTdm6FmCXdwUlMeSljBA==
@@ -8113,7 +8113,7 @@ firebase-admin@^9.7.0:
     "@google-cloud/firestore" "^4.5.0"
     "@google-cloud/storage" "^5.3.0"
 
-firebase@^8.4.3:
+firebase@8.4.3:
   version "8.4.3"
   resolved "https://registry.yarnpkg.com/firebase/-/firebase-8.4.3.tgz#d81170d86d8c752f58d8f1ccd715e5e97f6e3929"
   integrity sha512-STM7xvFBs9MSgtReaWX901HPfIlsA7CNLKkXyVW+aKFmb4znmSxiRFT+pbLyor+ueb5Sj+/VjC97g51Om+Jw4w==
@@ -12940,7 +12940,7 @@ prompts@^2.0.1, prompts@^2.4.0, prompts@^2.4.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@15.7.2, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -12956,7 +12956,7 @@ property-information@^5.0.0:
   dependencies:
     xtend "^4.0.0"
 
-proposal-temporal@^0.8.0:
+proposal-temporal@0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/proposal-temporal/-/proposal-temporal-0.8.0.tgz#6787b49d187e9245d38e7b58d028fd1c84dd14b0"
   integrity sha512-Ho2uZqtuK310ptV//us50nJIe0Yja1g2LI9zDG9eNDV+oo5DmNqT+zXz6jEVbsZHMa+qSD/FfT776eI64bfuRA==
@@ -13530,7 +13530,7 @@ regenerator-transform@^0.14.2:
   dependencies:
     "@babel/runtime" "^7.8.4"
 
-regex-not@^1.0.0:
+regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/regex-not/-/regex-not-1.0.2.tgz#1f4ece27e00b0b65e0247a6810e6a85d83a5752c"
   integrity sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==
@@ -15367,7 +15367,7 @@ typescript@~4.0.2:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.7.tgz#7168032c43d2a2671c95c07812f69523c79590af"
   integrity sha512-yi7M4y74SWvYbnazbn8/bmJmX4Zlej39ZOqwG/8dut/MYoSQ119GY9ZFbbGsD4PFZYWxqik/XsP3vk3+W5H3og==
 
-ulid@^2.3.0:
+ulid@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/ulid/-/ulid-2.3.0.tgz#93063522771a9774121a84d126ecd3eb9804071f"
   integrity sha512-keqHubrlpvT6G2wH0OEfSW4mquYRcbe/J8NMmveoQOjUqmo+hXtO+ORCpWhdbZ7k72UtY61BL7haGxW6enBnjw==
