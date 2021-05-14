@@ -2357,7 +2357,12 @@
     pino "^6.11.3"
     pino-pretty "^4.7.1"
 
-"@redwoodjs/auth@0.31.2", "@redwoodjs/auth@^0.31.2":
+"@redwoodjs/auth@0.32.2":
+  version "0.32.2"
+  resolved "https://registry.yarnpkg.com/@redwoodjs/auth/-/auth-0.32.2.tgz#57d0c460323267a97484446ce0bda794b3d6853d"
+  integrity sha512-Fe5c/XmqRjIe5Udd8BtkRygvhD6ZQ4yJvXm4fV5LUNXTZ8oJCPFFqfbZmeQILxtjEJIVsD1vmVo6UntH3a1NFg==
+
+"@redwoodjs/auth@^0.31.2":
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/@redwoodjs/auth/-/auth-0.31.2.tgz#f936ab10a71218358732db4ad204d6773532d042"
   integrity sha512-MOmuoYCXsKa84aua6hxGg6r5auI52/OFTZ8moJs3HNetIEs28qCrWnTl34zg2NT4lR51I6tf81bTOFM5qQ4GVA==
