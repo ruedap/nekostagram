@@ -2508,10 +2508,10 @@
   resolved "https://registry.yarnpkg.com/@redwoodjs/eslint-plugin-redwood/-/eslint-plugin-redwood-0.31.2.tgz#c177c5c18fca2bc2201b9c6ffde82b197904e8b8"
   integrity sha512-OFsC72KFeB1OuCA6VM+IuVPZy/inZTmJCBJNZ9XxuYvnic46N0Bi3YfSM+4MiqPGF9ZD0i7AizYIauYSzLmFmA==
 
-"@redwoodjs/forms@0.31.2":
-  version "0.31.2"
-  resolved "https://registry.yarnpkg.com/@redwoodjs/forms/-/forms-0.31.2.tgz#678d8272857725ba69b38f59c72237b482863ba7"
-  integrity sha512-F+eyTCAM/JjZJUyPPgNuEQWKw+bR7POCAzKB8ZZLKPZE/+ij5V6fzRNXiVUZ8rWdYVFRVuXarvvLlHqXUpcgog==
+"@redwoodjs/forms@0.32.2":
+  version "0.32.2"
+  resolved "https://registry.yarnpkg.com/@redwoodjs/forms/-/forms-0.32.2.tgz#2d34c1991740722419f845fc23745f8e5d3439cb"
+  integrity sha512-YpyIXRvcpf8YR0NTqpSEso0zklwukNtUqWN/iNdrcGHW2vCJqB0Ic4c55uopEBBMO8xexA3POy2uvj0zeHPfOg==
   dependencies:
     "@types/pascalcase" "^1.0.0"
     core-js "3.10.1"
