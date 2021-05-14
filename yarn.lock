@@ -21,6 +21,25 @@
     tslib "^1.10.0"
     zen-observable "^0.8.14"
 
+"@apollo/client@^3.3.15":
+  version "3.3.18"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.3.18.tgz#dc722576a88fddb5c3ae0bb03d5675e0bb7ec07e"
+  integrity sha512-SaJSda4V36/pnv7jkCBROBPwd3w/3TnG/Bd8oLESuNqm6ruXDHt067ow00Y2zz1AOL8SuOI9LXjmkr+FcTqnIQ==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.0.0"
+    "@types/zen-observable" "^0.8.0"
+    "@wry/context" "^0.6.0"
+    "@wry/equality" "^0.4.0"
+    fast-json-stable-stringify "^2.0.0"
+    graphql-tag "^2.12.0"
+    hoist-non-react-statics "^3.3.2"
+    optimism "^0.16.0"
+    prop-types "^15.7.2"
+    symbol-observable "^2.0.0"
+    ts-invariant "^0.7.0"
+    tslib "^1.10.0"
+    zen-observable "^0.8.14"
+
 "@apollo/protobufjs@1.2.2", "@apollo/protobufjs@^1.0.3":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@apollo/protobufjs/-/protobufjs-1.2.2.tgz#4bd92cd7701ccaef6d517cdb75af2755f049f87c"
@@ -2362,6 +2381,11 @@
   resolved "https://registry.yarnpkg.com/@redwoodjs/auth/-/auth-0.31.2.tgz#f936ab10a71218358732db4ad204d6773532d042"
   integrity sha512-MOmuoYCXsKa84aua6hxGg6r5auI52/OFTZ8moJs3HNetIEs28qCrWnTl34zg2NT4lR51I6tf81bTOFM5qQ4GVA==
 
+"@redwoodjs/auth@^0.32.2":
+  version "0.32.2"
+  resolved "https://registry.yarnpkg.com/@redwoodjs/auth/-/auth-0.32.2.tgz#57d0c460323267a97484446ce0bda794b3d6853d"
+  integrity sha512-Fe5c/XmqRjIe5Udd8BtkRygvhD6ZQ4yJvXm4fV5LUNXTZ8oJCPFFqfbZmeQILxtjEJIVsD1vmVo6UntH3a1NFg==
+
 "@redwoodjs/cli@^0.31.2":
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/@redwoodjs/cli/-/cli-0.31.2.tgz#8265a2b9796dfd3c5c9db9d844bee770818e48a8"
@@ -2594,7 +2618,19 @@
     "@types/react" "17.0.3"
     msw "^0.21.2"
 
-"@redwoodjs/web@0.31.2", "@redwoodjs/web@^0.31.2":
+"@redwoodjs/web@0.32.2":
+  version "0.32.2"
+  resolved "https://registry.yarnpkg.com/@redwoodjs/web/-/web-0.32.2.tgz#e8209b2a709816f58cd3bf0e629cdb62054ffa6d"
+  integrity sha512-5x69AxwSMdSJz53hi4DXt5/NXTa9f6UwDg9rOAklVfEU+l4IhPHVXqY7Q0XQotzKsH2wdMcn+84J1BQI5LaprQ==
+  dependencies:
+    "@apollo/client" "^3.3.15"
+    "@redwoodjs/auth" "^0.32.2"
+    core-js "3.10.1"
+    graphql "^15.3.0"
+    proptypes "^1.1.0"
+    react-hot-toast "^1.0.2"
+
+"@redwoodjs/web@^0.31.2":
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/@redwoodjs/web/-/web-0.31.2.tgz#3540d94e0e2e533d06f3a06d336ad0ab409c6c9b"
   integrity sha512-nk7OTlunb9xC4HjXyoURhORrXecV12JrSsi8Zzv1sRAkbjDEAAo8B/BchXl1YfPMMEG7gnbEPuCVu4V3Y5YcKA==
@@ -11963,6 +11999,14 @@ optimism@^0.15.0:
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/optimism/-/optimism-0.15.0.tgz#c65e694bec7ce439f41e9cb8fc261a72d798125b"
   integrity sha512-KLKl3Kb7hH++s9ewRcBhmfpXgXF0xQ+JZ3xQFuPjnoT6ib2TDmYyVkKENmGxivsN2G3VRxpXuauCkB4GYOhtPw==
+  dependencies:
+    "@wry/context" "^0.6.0"
+    "@wry/trie" "^0.3.0"
+
+optimism@^0.16.0:
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/optimism/-/optimism-0.16.1.tgz#7c8efc1f3179f18307b887e18c15c5b7133f6e7d"
+  integrity sha512-64i+Uw3otrndfq5kaoGNoY7pvOhSsjFEN4bdEFh80MWVk/dbgJfMv7VFDeCT8LxNAlEVhQmdVEbfE7X2nWNIIg==
   dependencies:
     "@wry/context" "^0.6.0"
     "@wry/trie" "^0.3.0"
