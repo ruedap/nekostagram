@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@redwoodjs/api": "0.31.2",
-    "@redwoodjs/api-server": "0.31.2",
+    "@redwoodjs/api-server": "0.32.2",
     "firebase-admin": "9.7.0"
   }
 }
