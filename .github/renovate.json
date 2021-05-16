@@ -14,5 +14,12 @@
   },
   "schedule": "every weekend",
   "timezone": "Asia/Tokyo",
-  "labels": ["deps"]
+  "labels": ["deps"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["redwoodjs"],
+      "matchPackagePatterns": ["^@redwoodjs/"],
+      "groupName": "redwoodjs monorepo"
+    }
+  ]
 }
