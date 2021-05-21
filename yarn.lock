@@ -1315,10 +1315,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@compiled/react@0.6.11":
-  version "0.6.11"
-  resolved "https://registry.yarnpkg.com/@compiled/react/-/react-0.6.11.tgz#daea2936ab2ca962e11169a8c582ed61525ecfeb"
-  integrity sha512-y2UqHlBiljkNRR0s7kQb+NdbWnCKQxsrqGs93GY+VmCs/DbbV73AjkJ3AS+JFK04uk5PJvi/Zi5DS0H4cZtXFw==
+"@compiled/react@0.6.12":
+  version "0.6.12"
+  resolved "https://registry.yarnpkg.com/@compiled/react/-/react-0.6.12.tgz#46d8dc7b551018b6003ee76103d315795fadcc90"
+  integrity sha512-IdVpurh74Fl77J9SMM1N7mafkMZgsqwMR2u6eyoqFNxqIdTD7ntln9n+FQTiTDuZPPZBY6oUUDnk824neHXNiA==
   dependencies:
     csstype "^3.0.8"
 
