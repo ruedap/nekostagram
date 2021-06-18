@@ -18,7 +18,7 @@
     "@redwoodjs/forms": "0.32.2",
     "@redwoodjs/router": "0.32.2",
     "@redwoodjs/web": "0.32.2",
-    "firebase": "8.6.7",
+    "firebase": "8.6.8",
     "prop-types": "15.7.2",
     "proposal-temporal": "0.8.0",
     "react": "17.0.2",
