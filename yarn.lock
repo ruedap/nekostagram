@@ -7430,7 +7430,7 @@ error-stack-parser@^2.0.6:
   dependencies:
     stackframe "^1.1.1"
 
-es-abstract@^1.17.0-next.0, es-abstract@^1.17.2, es-abstract@^1.18.0-next.1, es-abstract@^1.18.0-next.2, es-abstract@^1.18.2:
+es-abstract@^1.17.0-next.0, es-abstract@^1.17.2, es-abstract@^1.18.0-next.1, es-abstract@^1.18.0-next.2, es-abstract@^1.18.2, es-abstract@^1.18.3:
   version "1.18.3"
   resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.18.3.tgz#25c4c3380a27aa203c44b2b685bba94da31b63e0"
   integrity sha512-nQIr12dxV7SSxE6r6f1l3DtAeEYdsGpps13dR0TwJg1S8gyp4ZPgy3FZcHBgbiQqnoqSTb+oC+kO4UQ0C/J8vw==
@@ -13263,13 +13263,13 @@ property-information@^5.0.0:
   dependencies:
     xtend "^4.0.0"
 
-proposal-temporal@0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/proposal-temporal/-/proposal-temporal-0.8.0.tgz#6787b49d187e9245d38e7b58d028fd1c84dd14b0"
-  integrity sha512-Ho2uZqtuK310ptV//us50nJIe0Yja1g2LI9zDG9eNDV+oo5DmNqT+zXz6jEVbsZHMa+qSD/FfT776eI64bfuRA==
+proposal-temporal@0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/proposal-temporal/-/proposal-temporal-0.9.0.tgz#4841cf83cf270f85a829e9283843ea8796d3d86f"
+  integrity sha512-AyNg3NmmBDCDbABQDmsnsY1B8VciwO9wZm+C3rClAgkPre+SpZDcIGje0WLZwroyqUFDySqW7VV6vcvAv8Bi+Q==
   dependencies:
     big-integer "^1.6.48"
-    es-abstract "^1.18.0-next.1"
+    es-abstract "^1.18.3"
 
 proptypes@^1.1.0:
   version "1.1.0"
