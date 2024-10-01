@@ -1710,12 +1710,12 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@compiled/react@0.6.13":
-  version "0.6.13"
-  resolved "https://registry.yarnpkg.com/@compiled/react/-/react-0.6.13.tgz#931031c08cb00bd57c69f8f2141a1ff3f0b35875"
-  integrity sha512-6JvUq88zqw9GSEb1jlB7tMCQ4YmYrhxNnoJWfXVowfTUNlpDjV5IqYvj2vq6+4wL7XkWVY34e9uonnMADefOsQ==
+"@compiled/react@0.18.1":
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/@compiled/react/-/react-0.18.1.tgz#d5d4be81e982e610f506f18763b7475b8f3f81f2"
+  integrity sha512-sL2UqrWaErILSPdnkg1Mt7CyVIET+j9+TArVSU609/wE/72KN3THFIUiMMmI1P8kX7CskPY7JdkcU6q70vPmVQ==
   dependencies:
-    csstype "^3.0.8"
+    csstype "^3.1.2"
 
 "@discoveryjs/json-ext@^0.5.0":
   version "0.5.3"
@@ -8316,10 +8316,15 @@ csstype@^2.5.7:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.17.tgz#4cf30eb87e1d1a005d8b6510f95292413f6a1c0e"
   integrity sha512-u1wmTI1jJGzCJzWndZo8mk4wnPTZd1eOIYTYvuEyOQGfmDl3TrabCCfKnOC86FZwW/9djqTl933UF/cS425i9A==
 
-csstype@^3.0.2, csstype@^3.0.8:
+csstype@^3.0.2:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.8.tgz#d2266a792729fb227cd216fb572f43728e1ad340"
   integrity sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==
+
+csstype@^3.1.2:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.3.tgz#d80ff294d114fb0e6ac500fbf85b60137d7eff81"
+  integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
 
 cyclist@^1.0.1:
   version "1.0.1"
