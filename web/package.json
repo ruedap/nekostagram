@@ -13,7 +13,7 @@
     ]
   },
   "dependencies": {
-    "@compiled/react": "0.6.13",
+    "@compiled/react": "0.18.1",
     "@redwoodjs/auth": "0.36.4",
     "@redwoodjs/forms": "0.36.4",
     "@redwoodjs/router": "0.36.4",
